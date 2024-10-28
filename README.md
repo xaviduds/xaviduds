@@ -2,7 +2,7 @@
 
 <img src="https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png" width="100px">
 
-Is my main-only project: an app for everything. I currently use it for automation of my system config (dotfiles) and control, sending shell commands, entering editors, git versioning, web pages accessing, task management and support; all in a .sql that is fed into Lince, which is funny because it's a Postgres db, with an elephant as it's mascot, and Lince is Lynx, a carnivorous anymal.. hahahah... anyway... Currently working on automating interactions with other computers for economic trades.
+Is my main-only project: an app for everything. I currently use it for automation of my system config (dotfiles) and control, sending shell commands, entering editors, git versioning, web pages accessing, task management and support; all in a .sql. Currently working on automating interactions with other computers for economic trades.
 
 # [Roadmap.sh](https://roadmap.sh/):
 
