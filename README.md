@@ -9,12 +9,3 @@ Is my main-only project: an app for everything. I currently use it for automatio
 [![roadmap.sh](https://roadmap.sh/card/tall/66b2c6b5d9896b3d14378426?variant=dark&roadmaps=backend%2Clinux%2Ccomputer-science%2Crust)](https://roadmap.sh/u/xaviduds)
 
 Is my current platform for learning.
-
-<div align='center'>
-  
-  ---
-  
-  I use <a href='https://nixos.org/'>NixOS</a> btw.
-
-![nixos](./nixos.gif)
-</div>
