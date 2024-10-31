@@ -6,6 +6,6 @@ Is my main-only project: an app for everything. I currently use it for automatio
 
 # [Roadmap.sh](https://roadmap.sh/):
 
-[![roadmap.sh](https://roadmap.sh/card/tall/66b2c6b5d9896b3d14378426?variant=dark&roadmaps=backend%2Clinux%2Ccomputer-science%2Crust)](https://roadmap.sh/u/xaviduds)
+<a href="https://roadmap.sh"><img src="https://roadmap.sh/card/tall/66b2c6b5d9896b3d14378426?variant=dark" alt="roadmap.sh"/></a>
 
 Is my current platform for learning.
