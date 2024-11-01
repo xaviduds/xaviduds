@@ -4,8 +4,6 @@
 
 Is my main-only project: an app for everything. I currently use it for automation of my system config (dotfiles) and control, sending shell commands, entering editors, git versioning, web pages accessing, task management and support; all in a .sql. Currently working on automating interactions with other computers for economic trades.
 
-# [Roadmap.sh](https://roadmap.sh/):
-
-<a href="https://roadmap.sh"><img src="https://roadmap.sh/card/tall/66b2c6b5d9896b3d14378426?variant=dark" alt="roadmap.sh"/></a>
-
-Is my current platform for learning.
+<!-- # [Roadmap.sh](https://roadmap.sh/):
+ <a href="https://roadmap.sh"><img src="https://roadmap.sh/card/tall/66b2c6b5d9896b3d14378426?variant=dark" alt="roadmap.sh"/></a>
+ Is my current platform for learning. -->
