@@ -20,6 +20,8 @@ Ilusion: *CSS*
 
 ## - Familiar -
 
-### [Lince](https://github.com/lince-social/lince):
+<img src='https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png' width='100px'>
 
-A telepathic frost beast, with the heart of a blue elephant, blood of a Lynx, and body of a snake, yellow and blue patterned. It can repeatedly mimic actions you delegate to it, at certain intervals. By being telepathic, it understands you, knows your spells, your needs, and what you can do for the needs of others. It can communicate with other beings to meet your needs and to arrange contributions of your skills and wizardry to others, freely, for the love of magic or with a price.
+### [Lince](https://github.com/lince-social/lince): A telepathic frost beast, lynx shaped, elephant hearted, snake scaled.
+
+Being able to repeatedly mimic actions you delegate to it, at certain intervals, a Lince is a great companion. By being telepathic, it understands you, knows your spells, your needs, and what you can do for the needs of others. It can communicate with other beings to meet your needs and to arrange contributions to the needs of others, freely, for the love of magic, or with a price.
