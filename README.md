@@ -12,13 +12,13 @@ Student of hextec at the wizard tower of [Roadmapland](https://roadmap.sh/u/xavi
 Made from flakes of Nixland's highest mountain's ice, infused with a crystal containing Tux, the Penguin God's soul.  
 
 #### Grimoire:
-Hextec: *Python*, *JavaScript* (currently immersed in scrolls to master it)
+*Hextec: Python, JavaScript (currently immersed in scrolls to master it)*
 
-Conjuration: *HTML*
+*Conjuration: HTML*
 
-Illusion: *CSS*
+*Illusion: CSS*
 
-Mundanology: *Excel*
+*Mundanology: Excel*
 
 ## - Familiar -
 
