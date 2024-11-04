@@ -16,7 +16,7 @@ Hextec: *Python*, *JavaScript* (currently immersed in scrolls to master it)
 
 Conjuration: *HTML*
 
-Ilusion: *CSS*
+Illusion: *CSS*
 
 Mundanology: *Excel*
 
