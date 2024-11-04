@@ -18,6 +18,8 @@ Conjuration: *HTML*
 
 Ilusion: *CSS*
 
+Mundanology: *Excel*
+
 ## - Familiar -
 
 <img src='https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png' width='100px'>
