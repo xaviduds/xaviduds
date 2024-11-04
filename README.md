@@ -1,4 +1,4 @@
-# Duds, the Scholar.
+# Duds, the Shadow.
 ## - Profession -
 Student of hextec at the wizard tower of [Roadmapland](https://roadmap.sh/u/xaviduds).
 
