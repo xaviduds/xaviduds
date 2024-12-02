@@ -26,7 +26,7 @@
   </tr>
   <tr>
     <td><strong>Ice Staff</strong></td>
-    <td colspan="2"><img src="nixos.gif" width="20px"> Made from flakes of Nixland's highest mountain's ice, infused with a crystal containing Tux, the Penguin God's soul.</td>
+    <td colspan="2"><img src="nixos.gif" width="20px"> Made from flakes of Nix ice, infused with a crystal containing Tux, the Penguin God's soul.</td>
   </tr>
 
   <tr>
