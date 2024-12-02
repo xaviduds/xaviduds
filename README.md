@@ -69,7 +69,6 @@
     </td>
   </tr>
 </table>
-
 <!--
 # Duds, the Shadow.
 ## - Profession -
