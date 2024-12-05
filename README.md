@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td><strong>Student</strong></td>
-    <td colspan="2">Pondering orb at the wizard tower of <a href="https://roadmap.sh/u/xaviduds">Roadmapland</a>.</td>
+    <td colspan="2">Pondering orbs at the wizard tower of <a href="https://roadmap.sh/u/xaviduds">Roadmapland</a>.</td>
   </tr>
 
   <tr>
@@ -30,17 +30,24 @@
   </tr>
 
   <tr>
-    <td rowspan="6">
+    <td rowspan="8">
       <strong>Grimoire</strong>
     </td>
   </tr>
+  <!--
+   <tr>
+    <td>Automaton & Divination</td>
+    <td>scikit-learn, TensorFlow, Pytorch</td>
+  </tr>
+  -->
   <tr>
     <td>Alquery</td>
     <td>PostgreSQL</td>
   </tr>
   <tr>
     <td><em>Rune Enchantment</em></td>
-    <td>Python (Pandas, Flask), JavaScript/Typescript (React, Next.js) [currently immersed in scrolls to masterfully weave them]</td>
+    <td>Python (Pandas, Flask), JavaScript/Typescript (React, Next.js, Node.js)</td>
+     <!--[currently immersed in scrolls to masterfully weave them] -->
   </tr>
   <tr>
     <td><em>Conjuration</em></td>
@@ -53,6 +60,10 @@
   <tr>
     <td><em>Mundanology</em></td>
     <td>Excel</td>
+  </tr>
+  <tr>
+    <td><em>Retromancy</em></td>
+    <td>Git, GitHub</td>
   </tr>
 
   <tr>
@@ -69,6 +80,7 @@
     </td>
   </tr>
 </table>
+
 <!--
 # Duds, the Shadow.
 ## - Profession -
