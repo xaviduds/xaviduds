@@ -50,7 +50,7 @@
   </tr>
   <tr>
     <td><em>Rune Enchantment</em></td>
-    <td>Python (Pandas, Flask), Typescript{JavaScript} (React, Next.js, Node.js), Go [ Channeling... ]</td>
+    <td>Python (Pandas, Flask), Typescript{JavaScript} (React, Next.js, Node.js), Go [Channeling...]</td>
      <!--[currently immersed in scrolls to masterfully weave them] -->
   </tr>
   <tr>
