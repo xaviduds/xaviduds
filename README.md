@@ -1,4 +1,3 @@
-# Duds, the Shadow<br>
 <table>
   <tr>
     <td colspan="3" align="center">
@@ -33,7 +32,7 @@
       <a href="https://github.com/lince-social/lince">Lince</a>
     </td>
     <td colspan="2" >
-      <img src="https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png" width="100px" align="left">A robotic companion for everything. It models your Needs and what you can do for others (Contributions), binding a quantity to every phenomena, allowing for manipulation and logic building. Facilitating all economic trades, organizing human interactions, automating computable tasks. It is still a cub, but becomes powerful if nurtured with commits and blue elephants.</td>
+      <img src="https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png" width="95px" align="left">A robotic companion for everything. It models your Needs and what you can do for others (Contributions), binding a quantity to every phenomena, allowing for manipulation and logic building. Facilitating all economic trades, organizing human interactions, automating computable tasks. It is still a cub, but becomes powerful if nurtured with commits and blue elephants.</td>
   </tr>
  
   <tr>
@@ -43,7 +42,7 @@
   </tr>
   <tr>
     <td><strong>Ice Staff</strong></td>
-    <td colspan="2"><img src="nixos.gif" width="20px"> Made from flakes of Nix ice, infused with a crystal containing Tux, the Penguin God's soul.</td>
+    <td colspan="2"><img src="nixos.gif" width="20px" align="left">Made from flakes of Nix ice, infused with a crystal containing Tux, the Penguin God's soul.</td>
   </tr>
  <tr>
     <td rowspan="11">
