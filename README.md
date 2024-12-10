@@ -1,3 +1,4 @@
+# Duds, the Shadow<br>
 <table>
   <tr>
     <td colspan="3" align="center">
@@ -31,9 +32,8 @@
     <td>
       <a href="https://github.com/lince-social/lince">Lince</a>
     </td>
-    <td colspan="2">
-      <img src="https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png" width="100px">
-    </td>
+    <td colspan="2" >
+      <img src="https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png" width="100px" align="left">A robotic companion for everything. It models your Needs and what you can do for others, Contributions, binding a quantity to every phenomena, allowing for manipulation and logic building. Facilitating all economic trades, organizing human interactions, automating computable tasks. It is still a cub, but becomes powerful if nurtured with commits and blue elephants.</td>
   </tr>
  
   <tr>
@@ -46,7 +46,7 @@
     <td colspan="2"><img src="nixos.gif" width="20px"> Made from flakes of Nix ice, infused with a crystal containing Tux, the Penguin God's soul.</td>
   </tr>
  <tr>
-    <td rowspan="10">
+    <td rowspan="11">
       <strong>Grimoire</strong>
     </td>
   </tr>
@@ -62,7 +62,7 @@
   </tr>
   <tr>
     <td><em>Rune Enchantment</em></td>
-    <td>Python (Pandas, Plotly, Flask), Typescript{JavaScript} (React, Next.js, Node.js) [Channeling...]</td>
+    <td>Python (Pandas, Plotly, Flask), JavaScript/TypeScript (React, Next.js, Node.js) [Channeling...]</td>
   </tr>
   <tr>
     <td><em>Conjuration</em></td>
@@ -86,6 +86,10 @@
     <td>Obsidian, Notion, Azure DevOps Boards, ClickUp, Jira</td>
   </tr>
   <tr>
+    <td>Incantation</td>
+    <td>Helix, Neovim, Emacs, VS Code</td>
+  </tr>
+  <tr>
     <td><em>Clairvoyance</em></td>
     <td>Qlik</td>
   </tr>
@@ -93,5 +97,14 @@
     <td><em>Mundanology</em></td>
     <td>Office Apps: the Green, the Blue, the Orange. Canva, GIMP, Photopea, Audacity</td>
   </tr>
- 
+  <!--
+    <tr>
+    <td colspan="3" align="center">
+      <strong>Background</strong><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3">Ice Staff</td>
+  </tr>
+  -->
 </table>
