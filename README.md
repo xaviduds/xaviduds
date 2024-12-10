@@ -33,7 +33,7 @@
       <a href="https://github.com/lince-social/lince">Lince</a>
     </td>
     <td colspan="2" >
-      <img src="https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png" width="100px" align="left">A robotic companion for everything. It models your Needs and what you can do for others, Contributions, binding a quantity to every phenomena, allowing for manipulation and logic building. Facilitating all economic trades, organizing human interactions, automating computable tasks. It is still a cub, but becomes powerful if nurtured with commits and blue elephants.</td>
+      <img src="https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png" width="100px" align="left">A robotic companion for everything. It models your Needs and what you can do for others (Contributions), binding a quantity to every phenomena, allowing for manipulation and logic building. Facilitating all economic trades, organizing human interactions, automating computable tasks. It is still a cub, but becomes powerful if nurtured with commits and blue elephants.</td>
   </tr>
  
   <tr>
@@ -78,7 +78,7 @@
     <td>Git, GitHub</td>
   </tr>
   <tr>
-    <td><em>Cloudshaping</em></td>
+    <td><em>Nimbusforging</em></td>
     <td>Vercel, GitHub Pages</td>
   </tr>
     <tr>
