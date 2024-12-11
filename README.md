@@ -60,10 +60,25 @@
     </td>
   </tr>
  <tr>
-    <td rowspan="16">
+    <td rowspan="18">
       <strong>Grimoire</strong>
     </td>
   </tr>
+  <tr>
+  <td rowspan="3"><em>Rune Enchantment</em></td>
+  <tr>
+  <td>
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Python-black?logo=python&logoColor=white">
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Flask-black?logo=flask&logoColor=white">
+  </td></tr>
+  <tr><td>
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-JavaScript-black?logo=javascript&logoColor=white">
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-TypeScript-black?logo=typescript&logoColor=white">
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-React-black?logo=react&logoColor=white">
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Next.js-black?logo=next.js&logoColor=white">
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Node.js-black?logo=node.js&logoColor=white">
+  </td></tr>
+</tr>
   <!--
    <tr>
     <td>Automaton & Divination</td>
@@ -71,11 +86,13 @@
   </tr>
   -->
 <tr>
-  <td rowspan="3"><em>Automaton Weightcrafting & Clairvoyance</em></td>
+  <td rowspan="3"><em>Transmutation, Automaton & Divination</em></td>
   <tr>
   <td>
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-scikit--learn-black?logo=scikitlearn&logoColor=white">
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Jupyter-black?logo=jupyter&logoColor=white">
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Pandas-black?logo=pandas&logoColor=white">
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Plotly-black?logo=plotly&logoColor=white">
   </td></tr>
   <tr><td>
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Qlik-black?logo=qlik&logoColor=white"></td>
@@ -84,20 +101,6 @@
 <tr>
   <td>Alquery</td>
   <td><img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-PostgreSQL-black?logo=postgresql&logoColor=white"></td>
-</tr>
-<tr>
-  <td><em>Rune Enchantment</em></td>
-  <td>
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Python-black?logo=python&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Pandas-black?logo=pandas&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Plotly-black?logo=plotly&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Flask-black?logo=flask&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-JavaScript-black?logo=javascript&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-TypeScript-black?logo=typescript&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-React-black?logo=react&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Next.js-black?logo=next.js&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Node.js-black?logo=node.js&logoColor=white">
-  </td>
 </tr>
 <tr>
   <td rowspan="3"><em>Conjuration & Illusion</em></td>
