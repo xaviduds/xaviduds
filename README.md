@@ -122,7 +122,7 @@
   </tr>
    <tr>
     <td><strong>Meditation</strong></td>
-    <td colspan="2">Passive: Desire of pizza decreases by 30%.</td>
+    <td colspan="2">Active - Jhāna [Channel Time: random, Success Chance: random, Duration: random]: Consciousness is your only sense, +30MMP (mental mana points). Passive: Desire of pizza decreases by 30%.</td>
   </tr>
     <tr>
     <td><strong>Minimalism (Corrupted)</strong></td>
