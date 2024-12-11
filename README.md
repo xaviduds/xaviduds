@@ -69,10 +69,12 @@
   <tr><td>
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-JavaScript-black?logo=javascript&logoColor=white">
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-TypeScript-black?logo=typescript&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-React-black?logo=react&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Next.js-black?logo=next.js&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Node.js-black?logo=node.js&logoColor=white">
-    [Channeling...]
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-React_[Channeling...]-black?logo=react&logoColor=white">
+    <!--
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Next.js_[Channeling...]-black?logo=next.js&logoColor=white">
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Node.js_[Channeling...]-black?logo=node.js&logoColor=white">
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Go-black?logo=go&logoColor=white">
+    -->
   </td></tr>
   <tr><td>
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Python-black?logo=python&logoColor=white">
