@@ -72,6 +72,7 @@
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-React-black?logo=react&logoColor=white">
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Next.js-black?logo=next.js&logoColor=white">
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Node.js-black?logo=node.js&logoColor=white">
+    [Channeling...]
   </td></tr>
   <tr><td>
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Python-black?logo=python&logoColor=white">
