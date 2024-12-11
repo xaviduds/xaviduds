@@ -60,7 +60,7 @@
     </td>
   </tr>
  <tr>
-    <td rowspan="18">
+    <td rowspan="17">
       <strong>Grimoire</strong>
     </td>
   </tr>
