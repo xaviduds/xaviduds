@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <td><strong>Primary</strong></td>
-    <td colspan="2">Student, reading documentation scrolls and pondering orbs at the wizard tower of <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Roadmapland-black?logo=roadmapdotsh&logoColor=white">.</td>
+    <td colspan="2">Apprentice, reading scrolls and pondering orbs at the wizard tower of <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Roadmapland-black?logo=roadmapdotsh&logoColor=white">.</td>
   </tr>
  <tr>
     <td colspan="3" align="center">
