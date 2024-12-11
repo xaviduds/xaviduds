@@ -60,7 +60,7 @@
     </td>
   </tr>
  <tr>
-    <td rowspan="17">
+    <td rowspan="14">
       <strong>Grimoire</strong>
     </td>
   </tr>
@@ -135,7 +135,6 @@
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-VS%20Code-black?logo=lerna&logoColor=white">
   </td>
 </tr>
--->
 <tr>
   <td rowspan="3"><em>Chaos Weaving & Mundanology</em></td>
    <tr><td><img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Obsidian-black?logo=obsidian&logoColor=white">
@@ -158,7 +157,7 @@
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-OBS-black?logo=obsstudio&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Lightroom-black?logo=adobelightroom&logoColor=white">
   </td></tr>
-  
+  -->
 </tr>
     <tr>
     <td colspan="3" align="center">
