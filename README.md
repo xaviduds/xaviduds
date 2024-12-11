@@ -112,6 +112,10 @@
     <td colspan="2">k-NN, Linear/Logistic Regression, Decision Trees, Neural Networks (Novice)</td>
   </tr>
     <tr>
+    <td><strong>Linux From Scratch</strong></td>
+    <td colspan="2">The art of creating magical wands and staffs from scratch. The sourcerer needs to have a deep understanding of runes and magic circles. Currently immersed in scrolls to master it and craft my own.</td>
+  </tr>
+    <tr>
     <td colspan="3" align="center">
       <strong>Skills</strong>
     </td>
