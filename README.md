@@ -126,7 +126,7 @@
   </tr>
     <tr>
     <td><strong>Minimalism (Corrupted)</strong></td>
-    <td colspan="2">Passive: Increase in cleaning speed by 300%. Corruption: aversion to unuseful items.</td>
+    <td colspan="2">Passive: Increase cleaning speed by 300%. Corruption: aversion to unuseful items.</td>
   </tr>
   <!--
     <tr>
