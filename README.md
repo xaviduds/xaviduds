@@ -6,7 +6,7 @@
   </tr>
   <tr>
     <td><strong>Primary</strong></td>
-    <td colspan="2">Frontline Spellweaver (Novice)</td>
+    <td colspan="2">Frontend Spellweaver (Novice)</td>
   </tr>
   <tr>
     <td><strong>Secondary</strong></td>
@@ -51,7 +51,7 @@
   <tr>
     <td colspan="2">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Linux-black?logo=linux&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Nixos-black?logo=nixos&logoColor=white">
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-NixOS-black?logo=nixos&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Wayland-black?logo=wayland&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Hyprland-black?logo=hyprland&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Bash-black?logo=gnubash&logoColor=white">
