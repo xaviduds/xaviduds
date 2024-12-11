@@ -32,7 +32,7 @@
     </td>
     <td colspan="2" >
         <div style="word-wrap: break-word; word-break: break-word; white-space: normal;">
-      <img src="https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png" width="95px" align="left">A robotic companion for everything. It models your Needs and what you can do for others
+      <img src="https://github.com/lince-social/.github/blob/main/media/logo/branco_no_preto.png" width="95px" align="left">A companion for everything. It models your Needs and what you can do for others
           (Contributions), binding a quantity to every phenomena, allowing for manipulation and logic building. Facilitating all economic trades, organizing human interactions, automating computable tasks. It is still a cub, but becomes powerful if nurtured with commits and blue elephants.</td>
         </div>
   </tr>
