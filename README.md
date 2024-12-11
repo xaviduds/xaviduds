@@ -12,7 +12,6 @@
     <td><strong>Secondary</strong></td>
     <td colspan="2">Spell Owner (Adept)</td>
   </tr>
-  
   <tr>
     <td colspan="3" align="center">
       <strong>Profession</strong>
@@ -45,7 +44,7 @@
     <td colspan="2"><img src="nixos.gif" width="20px" align="left">Made from flakes of Nix ice, infused with a crystal containing Tux, the Penguin God's soul.</td>
   </tr>
  <tr>
-    <td rowspan="11">
+    <td rowspan="12">
       <strong>Grimoire</strong>
     </td>
   </tr>
@@ -55,6 +54,10 @@
     <td>scikit-learn, TensorFlow, Pytorch</td>
   </tr>
   -->
+   <tr>
+    <td><em>Weightcrafting</em></td>
+    <td>scikit-learn</td>
+  </tr>
   <tr>
     <td>Alquery</td>
     <td>PostgreSQL</td>
@@ -67,7 +70,6 @@
     <td><em>Conjuration</em></td>
     <td>HTML</td>
   </tr>
-  
   <tr>
     <td><em>Illusion</em></td>
     <td>CSS, Tailwind CSS</td>
@@ -95,6 +97,36 @@
     <tr>
     <td><em>Mundanology</em></td>
     <td>Office Apps: the Green, the Blue, the Orange. Canva, GIMP, Photopea, Audacity</td>
+  </tr>
+    <tr>
+    <td colspan="3" align="center">
+      <strong>Spells</strong>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>CRUD</strong></td>
+    <td colspan="2">The simplest enterprise spell, the first anyone learns. The sorcerer conjures a blue elephant to remember, speak and take actions.</td>
+  </tr>
+  <tr>
+    <td><strong>Machine Learning</strong></td>
+    <td colspan="2">k-NN, Linear/Logistic Regression, Decision Trees, Neural Networks (Novice)</td>
+  </tr>
+    <tr>
+    <td colspan="3" align="center">
+      <strong>Skills</strong>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Gardening</strong></td>
+    <td colspan="2">Passive: Ability of pulling life out of the dirt, or burying it, increases by 40%.</td>
+  </tr>
+   <tr>
+    <td><strong>Meditation</strong></td>
+    <td colspan="2">Passive: Desire of pizza decreases by 30%.</td>
+  </tr>
+    <tr>
+    <td><strong>Minimalism (Corrupted)</strong></td>
+    <td colspan="2">Passive: Increase in cleaning speed by 300%. Corruption: aversion to unuseful items.</td>
   </tr>
   <!--
     <tr>
