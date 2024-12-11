@@ -46,7 +46,7 @@
     <td rowspan="3"><strong>Ice Staff</strong></td>
   </tr>
   <tr>
-        <td colspan="2"><img src="nixos.gif" width="20px" align="left">Made from flakes of Nix ice, infused with a crystal containing Tux, the Penguin God's soul.</td>
+    <td colspan="2"><img src="nixos.gif" width="20px" align="left">Made from flakes of Nix ice, infused with a crystal containing Tux, the Penguin God's soul.</td>
   </tr>
   <tr>
     <td colspan="2">
@@ -66,17 +66,16 @@
   </tr>
   <tr>
   <td rowspan="3"><em>Rune Enchantment</em></td>
-  <tr>
-  <td>
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Python-black?logo=python&logoColor=white">
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Flask-black?logo=flask&logoColor=white">
-  </td></tr>
   <tr><td>
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-JavaScript-black?logo=javascript&logoColor=white">
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-TypeScript-black?logo=typescript&logoColor=white">
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-React-black?logo=react&logoColor=white">
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Next.js-black?logo=next.js&logoColor=white">
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Node.js-black?logo=node.js&logoColor=white">
+  </td></tr>
+  <tr><td>
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Python-black?logo=python&logoColor=white">
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Flask-black?logo=flask&logoColor=white">
   </td></tr>
 </tr>
   <!--
@@ -118,11 +117,13 @@
   <tr>
   <td>
 <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Git-black?logo=git&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-GitHub-black?logo=github&logoColor=white">
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-GitHub_Actions-black?logo=github&logoColor=white">
   </td></tr>
   <tr><td>
   <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Vercel-black?logo=vercel&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-GitHub%20Pages-black?logo=github&logoColor=white">
+  <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-GitHub%20Pages-black?logo=github&logoColor=white">
+  <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-S3-black?logo=amazons3&logoColor=white">
+  <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-EC2-black?logo=amazonec2&logoColor=white">
   </td></tr>
 </tr>
 <!--
@@ -143,6 +144,7 @@
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-ClickUp-black?logo=clickup&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Jira-black?logo=jira&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Discord-black?logo=discord&logoColor=white">
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Zoho-black?logo=zoho&logoColor=white">
   </td>
 </tr>
    <tr>
@@ -153,9 +155,11 @@
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-GIMP-black?logo=gimp&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Photopea-black?logo=photopea&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Audacity-black?logo=audacity&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Obs-black?logo=obsstudio&logoColor=white">
-  </td>
-</tr></tr>
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-OBS-black?logo=obsstudio&logoColor=white">
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Lightroom-black?logo=adobelightroom&logoColor=white">
+  </td></tr>
+  
+</tr>
     <tr>
     <td colspan="3" align="center">
       <strong>Spells</strong>
