@@ -19,8 +19,7 @@
   </tr>
   <tr>
     <td><strong>Primary</strong></td>
-    <td><strong>Student</strong></td>
-    <td>Reading <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Scrolls-black?logo=readthedocs&logoColor=white"> and pondering orbs at the wizard tower of <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Roadmapland-black?logo=roadmapdotsh&logoColor=white">.</td>
+    <td colspan="2">Student, reading documentation scrolls and pondering orbs at the wizard tower of <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Roadmapland-black?logo=roadmapdotsh&logoColor=white">.</td>
   </tr>
  <tr>
     <td colspan="3" align="center">
@@ -61,7 +60,7 @@
     </td>
   </tr>
  <tr>
-    <td rowspan="12">
+    <td rowspan="16">
       <strong>Grimoire</strong>
     </td>
   </tr>
@@ -72,11 +71,15 @@
   </tr>
   -->
 <tr>
-  <td><em>Weightcrafting</em></td>
+  <td rowspan="3"><em>Automaton Weightcrafting & Clairvoyance</em></td>
+  <tr>
   <td>
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-scikit--learn-black?logo=scikitlearn&logoColor=white">
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Jupyter-black?logo=jupyter&logoColor=white">
-  </td>
+  </td></tr>
+  <tr><td>
+    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Qlik-black?logo=qlik&logoColor=white"></td>
+  </td></tr>
 </tr>
 <tr>
   <td>Alquery</td>
@@ -97,40 +100,29 @@
   </td>
 </tr>
 <tr>
-  <td><em>Conjuration</em></td>
+  <td rowspan="3"><em>Conjuration & Illusion</em></td>
+  <tr>
   <td>
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-HTML-black?logo=html5&logoColor=white">
+  </td></tr>
+  <tr><td>
+  <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-CSS-black?logo=css3&logoColor=white">
+  <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Tailwind%20CSS-black?logo=tailwindcss&logoColor=white">
   </td>
-</tr>
+</tr></tr>
 <tr>
-  <td><em>Illusion</em></td>
-  <td><img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-CSS-black?logo=css3&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Tailwind%20CSS-black?logo=tailwindcss&logoColor=white">
-  </td>
-</tr>
-<tr>
-  <td><em>Retromancy</em></td>
-  <td><img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Git-black?logo=git&logoColor=white">
+  <td rowspan=3><em>Retromancy & Nimbusforging</em></td>
+  <tr>
+  <td>
+<img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Git-black?logo=git&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-GitHub-black?logo=github&logoColor=white">
-  </td>
-</tr>
-<tr>
-  <td><em>Nimbusforging</em></td>
-  <td><img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Vercel-black?logo=vercel&logoColor=white">
+  </td></tr>
+  <tr><td>
+  <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Vercel-black?logo=vercel&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-GitHub%20Pages-black?logo=github&logoColor=white">
-  </td>
+  </td></tr>
 </tr>
-<tr>
-  <td><em>Chaos Weaving</em></td>
-  <td><img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Obsidian-black?logo=obsidian&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Notion-black?logo=notion&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Azure%20DevOps%20Boards-black?logo=azuredevops&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-ClickUp-black?logo=clickup&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Jira-black?logo=jira&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Discord-black?logo=discord&logoColor=white">
-
-  </td>
-</tr>
+<!--
 <tr>
   <td>Incantation</td>
   <td><img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Helix-black?logo=helix&logoColor=white">
@@ -139,13 +131,18 @@
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-VS%20Code-black?logo=lerna&logoColor=white">
   </td>
 </tr>
+-->
 <tr>
-  <td><em>Clairvoyance</em></td>
-  <td>
-    <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Qlik-black?logo=qlik&logoColor=white"></td>
+  <td rowspan="3"><em>Chaos Weaving & Mundanology</em></td>
+   <tr><td><img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Obsidian-black?logo=obsidian&logoColor=white">
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Notion-black?logo=notion&logoColor=white">
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Azure%20DevOps%20Boards-black?logo=azuredevops&logoColor=white">
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-ClickUp-black?logo=clickup&logoColor=white">
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Jira-black?logo=jira&logoColor=white">
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Discord-black?logo=discord&logoColor=white">
+  </td>
 </tr>
-<tr>
-  <td><em>Mundanology</em></td>
+   <tr>
   <td>
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Markdown-black?logo=markdown&logoColor=white">
     <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Office%20Apps-black?logo=libreoffice&logoColor=white">
@@ -154,9 +151,8 @@
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Photopea-black?logo=photopea&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Audacity-black?logo=audacity&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Obs-black?logo=obsstudio&logoColor=white">
-
   </td>
-</tr>  
+</tr></tr>
     <tr>
     <td colspan="3" align="center">
       <strong>Spells</strong>
