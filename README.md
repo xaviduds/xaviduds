@@ -101,7 +101,7 @@
   </td></tr>
 </tr>
 <tr>
-  <td>Alquery</td>
+  <td><em>Alquery</em></td>
   <td><img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-PostgreSQL-black?logo=postgresql&logoColor=white"></td>
 </tr>
 <tr>
