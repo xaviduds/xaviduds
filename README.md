@@ -1,4 +1,6 @@
-<table>
+<details>
+  <summary>Character Sheet</summary>
+  <table>
   <tr>
     <td colspan="3" align="center">
       <strong>Class</strong>
@@ -197,3 +199,4 @@
     <td colspan="2">Passive: Increase cleaning speed by 300%. Corruption: aversion to unuseful items.</td>
   </tr>
 </table>
+</details>
