@@ -58,7 +58,7 @@
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Hyprland-black?logo=hyprland&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Bash-black?logo=gnubash&logoColor=white">
       <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Alacritty-black?logo=alacritty&logoColor=white">
-      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Helix_Editor-black?logo=helix&logoColor=white">
+      <img height="25px" alt="Static Badge" src="https://img.shields.io/badge/-Neovim-black?logo=neovim&logoColor=white">
     </td>
   </tr>
  <tr>
