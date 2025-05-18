@@ -1,0 +1,88 @@
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+    width: 95vw;
+    max-width: 100rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+}
+
+table,
+th,
+td {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-collapse: collapse;
+    padding: 0.25rem;
+}
+
+input {
+    all: unset;
+    color: #fff;
+    background: #000;
+    border: 1px solid white;
+    padding: 0.25rem;
+    border-radius: 2px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px white;
+}
+.active {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.inactive {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.filled {
+    background: #000;
+}
+
+.framed {
+    margin: 0.25rem;
+    padding: 0.25rem;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.middle_y {
+    align-items: center;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.shy {
+    width: min-content;
+    height: min-content;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
