@@ -1,9 +1,5 @@
-use maud::html;
+use super::presentation::presentation;
 
 pub fn comp_main() -> String {
-    html!(
-        input data-bind="input" {}
-        div data-text="$input" {}
-    )
-    .0
+    presentation().0
 }
