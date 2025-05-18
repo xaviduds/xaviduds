@@ -1,3 +1,6 @@
-pub fn header() -> &'static str {
-    "<header>header</header>"
+use crate::components::main::presentation::presentation;
+use maud::html;
+
+pub fn header() -> String {
+    html!((presentation())).0
 }
