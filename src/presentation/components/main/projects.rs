@@ -7,7 +7,7 @@ pub fn projects() -> Markup {
     html!(
         h1 { "Projects" }
         @for project in projects {
-            div class="project row middle_x" {
+            div class="project row middle_y" {
                 img class=(project.class) src=(project.icon) alt=(project.name) {}
                 div class="column" {
                     p class="title" {(project.name)}

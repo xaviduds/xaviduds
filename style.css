@@ -43,11 +43,11 @@ a p {
 }
 
 .middle_x {
-    align-items: center;
+    justify-content: center;
 }
 
 .middle_y {
-    justify-content: center;
+    align-items: center;
 }
 
 .shy {
@@ -67,14 +67,28 @@ a p {
 }
 
 .logo {
-    --size: 3rem;
+    --size: 4rem;
     width: var(--size);
     height: var(--size);
-    padding: 0.2rem;
+    padding: 0.1rem;
+    box-sizing: border-box;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .red {
     background: red;
+}
+
+.blue {
+    background: blue;
+}
+
+.green {
+    background: green;
 }
 
 .axum,
@@ -82,7 +96,12 @@ a p {
 .express,
 .htmx,
 .rust,
-.github {
+.github,
+.email,
+.nextjs,
+.sqlite,
+.cassandra,
+.mongodb {
     background: white;
     border-radius: 0.5rem;
 }
@@ -114,10 +133,42 @@ a p {
     margin: 0rem;
     padding: 0rem;
 }
-/*  */
+
 .selfie {
     --size: 10rem;
     width: var(--size);
     height: var(--size);
     border-radius: calc(var(--size) / 2);
+}
+
+.pea_size {
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+}
+
+.almond_size {
+    --size: 2.4rem;
+    width: var(--size);
+    height: var(--size);
+}
+
+.card {
+    background: #111f36;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 55vw;
+}
+
+.experience {
+    width: 30vw;
+    border-bottom: 0.1rem solid white;
+}
+
+.experience p {
+    margin: 0.2rem;
+}
+
+.right {
+    justify-content: end;
 }

@@ -1,8 +1,7 @@
-use general::html::final_html;
+use presentation::general::html::final_html;
 use std::fs;
 
-mod components;
-mod general;
+mod presentation;
 mod schema;
 
 fn main() {

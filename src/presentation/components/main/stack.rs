@@ -5,16 +5,20 @@ pub fn stack() -> Markup {
     let areas = areas();
 
     html! {
-        h1 { "Tech Stack" }
+        section {
+            h1 { "Tech Stack" }
 
-        @for area in &areas {
-            h2 { (area.name) }
+            @for area in &areas {
+                h2 { (area.name) }
 
-            div class="row" {
-                @for tech in &area.items {
-                    a href=(tech.link) class="middle_x column" target="_blank" rel="noopener noreferrer" {
-                        img class=("logo ".to_owned() + tech.class) src=(tech.icon) alt=(tech.name) {}
-                        div class="middle_x shy tabula_rasa" { (tech.name) }
+                div class="row" {
+                    @for tech in &area.items {
+                        a href=(tech.link) class="middle_y column" target="_blank" rel="noopener noreferrer" {
+                            div class="logo" {
+                            img class=(tech.class) src=(tech.icon) alt=(tech.name) {}
+                            }
+                            div class="middle_x shy tabula_rasa" { (tech.name) }
+                        }
                     }
                 }
             }
@@ -32,7 +36,7 @@ fn areas() -> Vec<Area> {
     );
     let htmx = Item::new("htmx", "HTMX", "tech/htmx.svg", "https://htmx.org/");
 
-    let frontend = Area::new("Frontend", vec![react, htmx, datastar.clone()]);
+    let frontend = Area::new("Frontend", vec![react, htmx]);
 
     let express = Item::new(
         "express",
@@ -60,10 +64,16 @@ fn areas() -> Vec<Area> {
         "https://flask.palletsprojects.com/en/stable/",
     );
 
-    let backend = Area::new(
-        "Backend",
-        vec![nest_js, elysia_js, axum, datastar, express, flask],
+    let backend = Area::new("Backend", vec![nest_js, elysia_js, axum, express, flask]);
+
+    let nextjs = Item::new(
+        "nextjs",
+        "Next.js",
+        "tech/nextjs.svg",
+        "https://nextjs.org/",
     );
+
+    let fullstack = Area::new("Fullstack", vec![nextjs, datastar]);
 
     // let node_js = Item::new("nodejs", "NodeJS", "tech/nodejs.svg");
     // let bun = Item::new("bun", "Bun", "tech/bun.svg");
@@ -87,8 +97,37 @@ fn areas() -> Vec<Area> {
         "https://www.python.org/downloads/",
     );
 
-    // let = Item::new("", "", "tech/.svg");
     let languages = Area::new("Languages", vec![rust, typescript, python]);
 
-    vec![languages, frontend, backend]
+    let sqlite = Item::new(
+        "sqlite",
+        "SQLite",
+        "tech/sqlite.svg",
+        "https://www.sqlite.org/",
+    );
+
+    let postgres = Item::new(
+        "postgres",
+        "PostgreSQL",
+        "tech/postgresql.svg",
+        "https://www.postgresql.org/",
+    );
+
+    let mongodb = Item::new(
+        "mongodb",
+        "MongoDB",
+        "tech/mongodb.svg",
+        "https://www.mongodb.com/",
+    );
+
+    let cassandra = Item::new(
+        "cassandra",
+        "Cassandra",
+        "tech/cassandra.svg",
+        "https://cassandra.apache.org/_/index.html",
+    );
+
+    let databases = Area::new("Databases", vec![sqlite, postgres, mongodb, cassandra]);
+
+    vec![languages, frontend, fullstack, backend, databases]
 }

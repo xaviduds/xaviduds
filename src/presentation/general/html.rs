@@ -1,4 +1,5 @@
-use super::{body::body, datastar::general_datastar};
+use super::framework::datastar;
+use crate::presentation::components::{header::header::header, main::main::comp_main};
 
 pub fn final_html() -> String {
     r#"<!DOCTYPE html>
@@ -10,7 +11,11 @@ pub fn final_html() -> String {
         <title>HTML 5 Boilerplate</title>
         <link rel="stylesheet" href="style.css">"#
         .to_string()
-        + general_datastar()
+        + datastar()
         + "</head>"
         + &body()
+}
+
+fn body() -> String {
+    "<body>".to_string() + &header() + &comp_main() + "</body>"
 }

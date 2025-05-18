@@ -1,23 +1,21 @@
-use maud::html;
-
 use crate::schema::tech::{Area, Item};
+use maud::{Markup, html};
 
-pub fn footer() -> String {
+pub fn socials() -> Markup {
     let area = area();
 
     html! {
-        footer class="row middle_y middle_x"{
+        div class="row middle_y middle_x"{
             @for tech in &area.items {
                 a href=(tech.link) class="middle_x column" target="_blank" rel="noopener noreferrer" {
-                    img class=("logo ".to_owned() + tech.class) src=(tech.icon) alt=(tech.name) {}
+                    img class=("almond_size ".to_owned() + tech.class) src=(tech.icon) alt=(tech.name) {}
                 }
             }
         }
     }
-    .0
 }
 
-fn area() -> Area {
+pub fn area() -> Area {
     let github = Item::new(
         "github",
         "GitHub",
@@ -30,6 +28,12 @@ fn area() -> Area {
         "social/linkedin.svg",
         "https://www.linkedin.com/in/xaviduds/",
     );
-    let area = Area::new("Socials", vec![github, linkedin]);
+    let email = Item::new(
+        "email",
+        "Email",
+        "social/email.svg",
+        "mailto:xaviduds@gmail.com",
+    );
+    let area = Area::new("Socials", vec![github, linkedin, email]);
     area
 }
