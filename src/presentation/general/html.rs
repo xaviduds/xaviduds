@@ -1,5 +1,6 @@
+use crate::presentation::components::{header::header, main::comp_main};
+
 use super::framework::datastar;
-use crate::presentation::components::{header::header::header, main::main::comp_main};
 
 pub fn final_html() -> String {
     r#"<!DOCTYPE html>
@@ -17,5 +18,5 @@ pub fn final_html() -> String {
 }
 
 fn body() -> String {
-    "<body>".to_string() + &header() + &comp_main() + "</body>"
+    r#"<body class="censa">"#.to_string() + &header() + &comp_main() + "</body>"
 }

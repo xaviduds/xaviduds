@@ -5,11 +5,11 @@ pub fn socials() -> Markup {
     let area = area();
 
     html! {
-        div class="row middle_y middle_x"{
+        div class="row"{
             @for tech in &area.items {
-                a href=(tech.link) class="middle_x column" target="_blank" rel="noopener noreferrer" {
-                    img class=("almond_size ".to_owned() + tech.class) src=(tech.icon) alt=(tech.name) {}
-                }
+                img href=(tech.link) target="_blank" rel="noopener noreferrer"
+                    class=("almond_size ".to_owned() + tech.class)
+                    src=(tech.icon) alt=(tech.name) {}
             }
         }
     }

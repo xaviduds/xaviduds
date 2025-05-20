@@ -9,7 +9,7 @@ pub fn experience() -> Markup {
        section id="experiences" {
            @for experience in experiences {
                div class="experience" {
-                   div class="row" {
+                   div class="row nowrap" {
                         p class="experience_title" { (experience.title) }
                         p { "@" }
                         p class="experience_company" { (experience.company) }
@@ -17,7 +17,7 @@ pub fn experience() -> Markup {
                     div class="row"{
                         p
                         p class="experience_start" { (experience.start) }
-                        p {"-"}
+                        p { "-" }
                         p class="experience_end" { (experience.end) }
                     }
                     p class="experience_details" { (experience.details) }
@@ -44,7 +44,7 @@ fn items() -> Vec<Experience> {
         title: "Production Engineering Intern",
         details: "Developed BI with
         Data Analysis and Visualization in the domain of
-        biomedicine machines distribution.",
+        biomedicine machine distribution.",
     };
     let evcomx = Experience {
         company: "EVCOMX",
@@ -53,7 +53,7 @@ fn items() -> Vec<Experience> {
         title: "Product Owner Intern",
         details: "Implemented Scrum rituals and
         worked alongside Data Scientists to
-        develop an AI and Operations Research product.",
+        develop a ML and Operations Research product.",
     };
     let preto_no_branco = Experience {
         company: "Preto no Branco",
