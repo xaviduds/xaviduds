@@ -205,6 +205,7 @@ p {
 }
 
 .glow {
+    background: pink;
 }
 
 .full_h {
@@ -220,5 +221,59 @@ p {
 }
 
 .left {
+    align-items: start;
+}
+
+.active_button {
+    background: #c96040;
+}
+
+.inactive_button {
+    background: #4b8739;
+}
+
+.active_jumpy_button {
+    position: relative;
+    background: #f5a97f;
+    border: 2px solid #111;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font: 16px sans-serif;
+    color: #111;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.active_jumpy_button:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0 #111;
+}
+
+.inactive_jumpy_button {
+    position: relative;
+    background: #ed8796;
+    border: 2px solid #111;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font: 16px sans-serif;
+    color: #111;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.inactive_jumpy_button:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0 #111;
+}
+
+.dark_blue {
+    background: #363a4f;
+}
+
+.top {
     align-items: start;
 }
