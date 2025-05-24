@@ -9,5 +9,5 @@ pub struct Item {
 pub struct Area {
     pub name: &'static str,
     pub items: Vec<Item>,
-    pub classes: Vec<&'static str>,
+    pub class: &'static str,
 }

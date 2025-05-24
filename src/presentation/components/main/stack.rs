@@ -7,7 +7,9 @@ pub fn stack() -> Markup {
             @for area in tech_areas() {
                 div class="row" {
                     @for tech in &area.items {
-                        a href=(tech.link) class="middle_y column" target="_blank" rel="noopener noreferrer" {
+                        a href=(tech.link) class=(area.class.to_owned() + " middle_y column") target="_blank" rel="noopener noreferrer"
+                            data-show=("$".to_owned() + area.class)
+                            {
                             div class="logo" {
                                 img class=(tech.classes.join(" ")) src=(tech.icon) alt=(tech.name) {}
                             }
@@ -41,7 +43,7 @@ pub fn tech_areas() -> Vec<Area> {
     let frontend = Area {
         name: "Frontend",
         items: vec![react, htmx],
-        classes: vec!["frontend"],
+        class: "frontend",
     };
 
     let nest_js = Item {
@@ -82,7 +84,7 @@ pub fn tech_areas() -> Vec<Area> {
     let backend = Area {
         name: "Backend",
         items: vec![nest_js, elysia_js, axum, express, flask],
-        classes: vec!["backend"],
+        class: "backend",
     };
 
     let nextjs = Item {
@@ -100,7 +102,7 @@ pub fn tech_areas() -> Vec<Area> {
     let fullstack = Area {
         name: "Fullstack",
         items: vec![nextjs, datastar],
-        classes: vec!["fullstack"],
+        class: "fullstack",
     };
 
     let rust = Item {
@@ -139,7 +141,7 @@ pub fn tech_areas() -> Vec<Area> {
     let languages = Area {
         name: "Languages",
         items: vec![rust, typescript, python],
-        classes: vec!["languages"],
+        class: "languages",
     };
 
     let sqlite = Item {
@@ -190,7 +192,7 @@ pub fn tech_areas() -> Vec<Area> {
     let databases = Area {
         name: "Databases",
         items: vec![sqlite, postgres, mongodb, cassandra, prisma],
-        classes: vec!["databases"],
+        class: "databases",
     };
 
     let docker = Item {
@@ -246,7 +248,7 @@ pub fn tech_areas() -> Vec<Area> {
     let operations = Area {
         name: "Operations",
         items: vec![docker, git, github, linux, vercel],
-        classes: vec!["operations"],
+        class: "operations",
     };
 
     vec![

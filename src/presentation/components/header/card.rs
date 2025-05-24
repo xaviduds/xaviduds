@@ -112,6 +112,6 @@ pub fn social_area() -> Area {
     Area {
         name: "Socials",
         items: vec![github, linkedin, email],
-        classes: vec!["socials"],
+        class: "socials",
     }
 }
