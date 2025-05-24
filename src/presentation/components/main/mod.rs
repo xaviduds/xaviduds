@@ -5,7 +5,7 @@ use stack::stack;
 
 pub fn comp_main() -> String {
     html!(
-        main class="row" {
+        main class="filler column framed middle_x middle_y" {
             (stack())
         }
     )

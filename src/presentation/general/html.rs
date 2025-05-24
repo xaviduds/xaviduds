@@ -18,5 +18,5 @@ pub fn final_html() -> String {
 }
 
 fn body() -> String {
-    r#"<body class="censa">"#.to_string() + &header() + &comp_main() + "</body>"
+    r#"<body class="column">"#.to_string() + &header() + &comp_main() + "</body>"
 }

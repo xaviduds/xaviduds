@@ -1,12 +1,12 @@
-use crate::presentation::components::header::social::socials;
+use crate::schema::tech::{Area, Item};
 use maud::{Markup, PreEscaped, html};
 
 pub fn card() -> Markup {
     html!(
-        div class="row middle_x middle_y censa" {
+        div class="row middle_x middle_y censa framed mini_eca" {
             (selfie())
             div class="column" {
-                div class="row censa bottom" {
+                div class="row censa" {
                     (title())
                     (socials())
                 }
@@ -23,7 +23,7 @@ fn selfie() -> Markup {
 
 fn title() -> Markup {
     html!(
-        div class="column" {
+        div class="column middle_x mini_censa" {
             div class="row middle_y censa" {
                 p class="title" { "Eduardo de Melo Xavier" }
                 (age())
@@ -32,6 +32,8 @@ fn title() -> Markup {
                 p class="stripped" { "Software Engineer @ Preto no Branco" }
                 (info())
             }
+            p class="middle_y" { "Likes: meditation, all-you-can-eat buffets and anime/manga."}
+            p class="middle_y" { "Dislikes: having too much stuff, commuting and social media."}
         }
     )
 }
@@ -70,5 +72,46 @@ fn age() -> Markup {
                    })();
                "#))
         }
+    }
+}
+
+pub fn socials() -> Markup {
+    html! {
+        div class="column" {
+            @for tech in &social_area().items {
+                a href=(tech.link) target="_blank" rel="noopener noreferrer" {
+                    img class=(tech.classes.join(" ") + " almond_size") src=(tech.icon) alt=(tech.name) {}
+                }
+            }
+        }
+    }
+}
+
+pub fn social_area() -> Area {
+    let github = Item {
+        name: "GitHub",
+        icon: "./assets/tech/github.svg".into(),
+        link: "https://github.com/xaviduds",
+        classes: vec!["github", "socials"],
+    };
+
+    let linkedin = Item {
+        name: "Linkedin",
+        icon: "./assets/social/linkedin.svg".into(),
+        link: "https://www.linkedin.com/in/xaviduds/",
+        classes: vec!["linkedin", "socials"],
+    };
+
+    let email = Item {
+        name: "Email",
+        icon: "./assets/social/email.svg".into(),
+        link: "mailto:xaviduds@gmail.com",
+        classes: vec!["email", "socials"],
+    };
+
+    Area {
+        name: "Socials",
+        items: vec![github, linkedin, email],
+        classes: vec!["socials"],
     }
 }

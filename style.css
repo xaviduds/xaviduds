@@ -15,41 +15,34 @@
 body {
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    margin: 0;
-    padding: 0;
-    background-color: #0e121f;
-    color: #fff;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    margin: 0rem;
+    padding: 0rem;
+    background-color: black;
+    color: white;
 }
 
 header {
-    width: 95vw;
+    padding: 0.5rem;
+    /* padding: 0.8rem 0.8rem 0.4rem 0.8rem; */
 }
 
 main {
-    margin: 0.2rem;
-    padding: 0px;
-    width: 95vw;
-    max-width: 100rem;
+    margin: 0rem 0.5rem 0.5rem 0.5rem;
 }
 
-a {
-    color: blue;
-    text-decoration: none;
+p {
+    margin: 0rem;
+    padding: 0rem;
 }
 
-a p {
-    color: inherit;
-    text-decoration: none;
+.flex {
+    display: flex;
 }
 
 .framed {
-    margin: 0.25rem;
-    padding: 0.25rem;
     border: 1px solid white;
-    border-radius: 2px;
+    border-radius: 0.5rem;
 }
 
 .middle_x {
@@ -63,6 +56,15 @@ a p {
 .shy {
     width: min-content;
     height: min-content;
+}
+
+.filler {
+    flex-grow: 1;
+}
+
+.showoff {
+    width: 100%;
+    height: 100%;
 }
 
 .row {
@@ -155,24 +157,12 @@ a p {
     width: 55vw;
 }
 
-.experience {
-    width: 40vw;
-    max-width: 25rem;
-    border-bottom: 0.1rem solid white;
-}
-
-.experience p {
-    margin: 0.2rem;
-}
-
-.right {
-    flex: auto;
-    justify-content: end;
-    align-items: end;
-}
-
 .censa {
     gap: 1rem;
+}
+
+.mini_censa {
+    gap: 0.5rem;
 }
 
 .stripped {
@@ -190,8 +180,14 @@ a p {
 .nextjs,
 .sqlite,
 .cassandra,
+.vercel,
+.prisma,
 .mongodb {
     background: white;
+    border-radius: 0.5rem;
+}
+.linux {
+    background: black;
     border-radius: 0.5rem;
 }
 
@@ -204,14 +200,25 @@ a p {
     margin: 1rem;
 }
 
-.float {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    gap: 0.3rem;
+.mini_eca {
+    padding: 0.5rem;
 }
 
 .glow {
-    
+}
+
+.full_h {
+    height: 100vh;
+}
+
+.full_w {
+    width: 100vw;
+}
+
+.almost_full_w {
+    width: 96vw;
+}
+
+.left {
+    align-items: start;
 }

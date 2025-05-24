@@ -2,15 +2,9 @@ use crate::schema::tech::{Area, Item};
 use maud::{Markup, html};
 
 pub fn stack() -> Markup {
-    let areas = areas();
-
     html! {
-        section {
-            h1 { "Tech Stack" }
-
-            @for area in &areas {
-                h2 { (area.name) }
-
+        section class="column middle_y middle_x"{
+            @for area in tech_areas() {
                 div class="row" {
                     @for tech in &area.items {
                         a href=(tech.link) class="middle_y column" target="_blank" rel="noopener noreferrer" {
@@ -26,7 +20,7 @@ pub fn stack() -> Markup {
     }
 }
 
-fn areas() -> Vec<Area> {
+pub fn tech_areas() -> Vec<Area> {
     let react = Item {
         name: "React",
         icon: "./assets/tech/react.svg".into(),
@@ -38,17 +32,16 @@ fn areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
-
     let htmx = Item {
         name: "HTMX",
         icon: "./assets/tech/htmx.svg".into(),
         link: "https://htmx.org/",
         classes: vec!["htmx", "frontend", "personal_project"],
     };
-
     let frontend = Area {
         name: "Frontend",
         items: vec![react, htmx],
+        classes: vec!["frontend"],
     };
 
     let nest_js = Item {
@@ -57,14 +50,12 @@ fn areas() -> Vec<Area> {
         link: "https://nestjs.com/",
         classes: vec!["nestjs", "backend", "professional_experience"],
     };
-
     let elysia_js = Item {
         name: "ElysiaJS",
         icon: "./assets/tech/elysiajs.svg".into(),
         link: "https://elysiajs.com/",
         classes: vec!["elysia", "backend", "personal_project"],
     };
-
     let axum = Item {
         name: "Axum",
         icon: "./assets/tech/axum.svg".into(),
@@ -76,24 +67,22 @@ fn areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
-
     let express = Item {
         name: "Express",
         icon: "./assets/tech/express.svg".into(),
         link: "https://expressjs.com/",
         classes: vec!["express", "backend", "personal_project"],
     };
-
     let flask = Item {
         name: "Flask",
         icon: "./assets/tech/flask.svg".into(),
         link: "https://flask.palletsprojects.com/en/stable/",
         classes: vec!["flask", "backend", "personal_project"],
     };
-
     let backend = Area {
         name: "Backend",
         items: vec![nest_js, elysia_js, axum, express, flask],
+        classes: vec!["backend"],
     };
 
     let nextjs = Item {
@@ -102,17 +91,16 @@ fn areas() -> Vec<Area> {
         link: "https://nextjs.org/",
         classes: vec!["nextjs", "fullstack", "personal_project"],
     };
-
     let datastar = Item {
         name: "Datastar",
         icon: "./assets/tech/datastar.webp".into(),
         link: "https://data-star.dev/",
         classes: vec!["datastar", "fullstack", "personal_project"],
     };
-
     let fullstack = Area {
         name: "Fullstack",
         items: vec![nextjs, datastar],
+        classes: vec!["fullstack"],
     };
 
     let rust = Item {
@@ -126,7 +114,6 @@ fn areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
-
     let typescript = Item {
         name: "Typescript",
         icon: "./assets/tech/typescript.svg".into(),
@@ -138,7 +125,6 @@ fn areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
-
     let python = Item {
         name: "Python",
         icon: "./assets/tech/python.svg".into(),
@@ -150,10 +136,10 @@ fn areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
-
     let languages = Area {
         name: "Languages",
         items: vec![rust, typescript, python],
+        classes: vec!["languages"],
     };
 
     let sqlite = Item {
@@ -162,14 +148,12 @@ fn areas() -> Vec<Area> {
         link: "https://www.sqlite.org/",
         classes: vec!["sqlite", "databases", "personal_project"],
     };
-
     let postgres = Item {
         name: "PostgreSQL",
         icon: "./assets/tech/postgresql.svg".into(),
         link: "https://www.postgresql.org/",
         classes: vec!["postgres", "databases", "personal_project"],
     };
-
     let mongodb = Item {
         name: "MongoDB",
         icon: "./assets/tech/mongodb.svg".into(),
@@ -181,7 +165,6 @@ fn areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
-
     let cassandra = Item {
         name: "Cassandra",
         icon: "./assets/tech/cassandra.svg".into(),
@@ -193,11 +176,80 @@ fn areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
-
+    let prisma = Item {
+        name: "Prisma",
+        icon: "./assets/tech/prisma.svg".into(),
+        link: "https://cassandra.apache.org/_/index.html",
+        classes: vec![
+            "prisma",
+            "databases",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
     let databases = Area {
         name: "Databases",
-        items: vec![sqlite, postgres, mongodb, cassandra],
+        items: vec![sqlite, postgres, mongodb, cassandra, prisma],
+        classes: vec!["databases"],
     };
 
-    vec![languages, frontend, fullstack, backend, databases]
+    let docker = Item {
+        name: "Docker",
+        icon: "./assets/tech/docker.svg".into(),
+        link: "https://www.docker.com/",
+        classes: vec![
+            "docker",
+            "operations",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+    let git = Item {
+        name: "Git",
+        icon: "./assets/tech/git.svg".into(),
+        link: "https://git-scm.com/",
+        classes: vec![
+            "git",
+            "operations",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+    let github = Item {
+        name: "GitHub",
+        icon: "./assets/tech/github.svg".into(),
+        link: "https://github.com/",
+        classes: vec![
+            "github",
+            "operations",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+    let linux = Item {
+        name: "Linux",
+        icon: "./assets/tech/tux_w.svg".into(),
+        link: "https://kernel.org/",
+        classes: vec![
+            "linux",
+            "operations",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+    let vercel = Item {
+        name: "Vercel",
+        icon: "./assets/tech/vercel.svg".into(),
+        link: "https://vercel.com/",
+        classes: vec!["vercel", "ops", "personal_project"],
+    };
+    let operations = Area {
+        name: "Operations",
+        items: vec![docker, git, github, linux, vercel],
+        classes: vec!["operations"],
+    };
+
+    vec![
+        languages, frontend, fullstack, backend, databases, operations,
+    ]
 }
