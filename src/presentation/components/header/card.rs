@@ -8,11 +8,8 @@ pub fn card() -> Markup {
             div class="column" {
                 div class="row censa bottom" {
                     (title())
-                    div class="right" {
-                        (socials())
-                    }
+                    (socials())
                 }
-                (speech())
             }
         }
     )
@@ -20,7 +17,7 @@ pub fn card() -> Markup {
 
 fn selfie() -> Markup {
     html!(
-        img class="selfie" src="assets/social/selfie.jpg" {}
+        img class="selfie" src="assets/social/selfie2.jpg" {}
     )
 }
 
@@ -74,14 +71,4 @@ fn age() -> Markup {
                "#))
         }
     }
-}
-
-fn speech() -> Markup {
-    html!(
-        p { "I have professional experience using Rust and NestJS on the backend and
-            React on the frontend. I also did data analysis/visualization and automation with Python.
-          I studied Machine Learning and Operations Research in my Production Engineering degree;
-          having worked as a Product Owner in a project that used them."
-        }
-    )
 }

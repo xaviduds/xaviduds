@@ -15,7 +15,7 @@ pub fn stack() -> Markup {
                     @for tech in &area.items {
                         a href=(tech.link) class="middle_y column" target="_blank" rel="noopener noreferrer" {
                             div class="logo" {
-                            img class=(tech.class) src=(tech.icon) alt=(tech.name) {}
+                                img class=(tech.classes.join(" ")) src=(tech.icon) alt=(tech.name) {}
                             }
                             div class="middle_x shy tabula_rasa" { (tech.name) }
                         }
@@ -27,107 +27,177 @@ pub fn stack() -> Markup {
 }
 
 fn areas() -> Vec<Area> {
-    let react = Item::new("react", "React", "tech/react.svg", "https://react.dev/");
-    let datastar = Item::new(
-        "datastar",
-        "Datastar",
-        "tech/datastar.webp",
-        "https://data-star.dev/",
-    );
-    let htmx = Item::new("htmx", "HTMX", "tech/htmx.svg", "https://htmx.org/");
+    let react = Item {
+        name: "React",
+        icon: "./assets/tech/react.svg".into(),
+        link: "https://react.dev/",
+        classes: vec![
+            "react",
+            "frontend",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
 
-    let frontend = Area::new("Frontend", vec![react, htmx]);
+    let htmx = Item {
+        name: "HTMX",
+        icon: "./assets/tech/htmx.svg".into(),
+        link: "https://htmx.org/",
+        classes: vec!["htmx", "frontend", "personal_project"],
+    };
 
-    let express = Item::new(
-        "express",
-        "Express",
-        "tech/express.svg",
-        "https://expressjs.com/",
-    );
-    let nest_js = Item::new("nestjs", "NestJS", "tech/nestjs.svg", "https://nestjs.com/");
-    let axum = Item::new(
-        "axum",
-        "Axum",
-        "tech/axum.svg",
-        "https://github.com/tokio-rs/axum",
-    );
-    let elysia_js = Item::new(
-        "elysia",
-        "ElysiaJS",
-        "tech/elysiajs.svg",
-        "https://elysiajs.com/",
-    );
-    let flask = Item::new(
-        "flask",
-        "Flask",
-        "tech/flask.svg",
-        "https://flask.palletsprojects.com/en/stable/",
-    );
+    let frontend = Area {
+        name: "Frontend",
+        items: vec![react, htmx],
+    };
 
-    let backend = Area::new("Backend", vec![nest_js, elysia_js, axum, express, flask]);
+    let nest_js = Item {
+        name: "NestJS",
+        icon: "./assets/tech/nestjs.svg".into(),
+        link: "https://nestjs.com/",
+        classes: vec!["nestjs", "backend", "professional_experience"],
+    };
 
-    let nextjs = Item::new(
-        "nextjs",
-        "Next.js",
-        "tech/nextjs.svg",
-        "https://nextjs.org/",
-    );
+    let elysia_js = Item {
+        name: "ElysiaJS",
+        icon: "./assets/tech/elysiajs.svg".into(),
+        link: "https://elysiajs.com/",
+        classes: vec!["elysia", "backend", "personal_project"],
+    };
 
-    let fullstack = Area::new("Fullstack", vec![nextjs, datastar]);
+    let axum = Item {
+        name: "Axum",
+        icon: "./assets/tech/axum.svg".into(),
+        link: "https://github.com/tokio-rs/axum",
+        classes: vec![
+            "axum",
+            "backend",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
 
-    // let node_js = Item::new("nodejs", "NodeJS", "tech/nodejs.svg");
-    // let bun = Item::new("bun", "Bun", "tech/bun.svg");
-    // let javascript = Item::new("javascript", "Javascript", "tech/javascript.svg");
-    let typescript = Item::new(
-        "typescript",
-        "Typescript",
-        "tech/typescript.svg",
-        "https://www.typescriptlang.org/",
-    );
-    let rust = Item::new(
-        "rust",
-        "Rust",
-        "tech/rust.svg",
-        "https://www.rust-lang.org/",
-    );
-    let python = Item::new(
-        "python",
-        "Python",
-        "tech/python.svg",
-        "https://www.python.org/downloads/",
-    );
+    let express = Item {
+        name: "Express",
+        icon: "./assets/tech/express.svg".into(),
+        link: "https://expressjs.com/",
+        classes: vec!["express", "backend", "personal_project"],
+    };
 
-    let languages = Area::new("Languages", vec![rust, typescript, python]);
+    let flask = Item {
+        name: "Flask",
+        icon: "./assets/tech/flask.svg".into(),
+        link: "https://flask.palletsprojects.com/en/stable/",
+        classes: vec!["flask", "backend", "personal_project"],
+    };
 
-    let sqlite = Item::new(
-        "sqlite",
-        "SQLite",
-        "tech/sqlite.svg",
-        "https://www.sqlite.org/",
-    );
+    let backend = Area {
+        name: "Backend",
+        items: vec![nest_js, elysia_js, axum, express, flask],
+    };
 
-    let postgres = Item::new(
-        "postgres",
-        "PostgreSQL",
-        "tech/postgresql.svg",
-        "https://www.postgresql.org/",
-    );
+    let nextjs = Item {
+        name: "Next.js",
+        icon: "./assets/tech/nextjs.svg".into(),
+        link: "https://nextjs.org/",
+        classes: vec!["nextjs", "fullstack", "personal_project"],
+    };
 
-    let mongodb = Item::new(
-        "mongodb",
-        "MongoDB",
-        "tech/mongodb.svg",
-        "https://www.mongodb.com/",
-    );
+    let datastar = Item {
+        name: "Datastar",
+        icon: "./assets/tech/datastar.webp".into(),
+        link: "https://data-star.dev/",
+        classes: vec!["datastar", "fullstack", "personal_project"],
+    };
 
-    let cassandra = Item::new(
-        "cassandra",
-        "Cassandra",
-        "tech/cassandra.svg",
-        "https://cassandra.apache.org/_/index.html",
-    );
+    let fullstack = Area {
+        name: "Fullstack",
+        items: vec![nextjs, datastar],
+    };
 
-    let databases = Area::new("Databases", vec![sqlite, postgres, mongodb, cassandra]);
+    let rust = Item {
+        name: "Rust",
+        icon: "./assets/tech/rust.svg".into(),
+        link: "https://www.rust-lang.org/",
+        classes: vec![
+            "rust",
+            "languages",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+
+    let typescript = Item {
+        name: "Typescript",
+        icon: "./assets/tech/typescript.svg".into(),
+        link: "https://www.typescriptlang.org/",
+        classes: vec![
+            "typescript",
+            "languages",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+
+    let python = Item {
+        name: "Python",
+        icon: "./assets/tech/python.svg".into(),
+        link: "https://www.python.org/downloads/",
+        classes: vec![
+            "python",
+            "languages",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+
+    let languages = Area {
+        name: "Languages",
+        items: vec![rust, typescript, python],
+    };
+
+    let sqlite = Item {
+        name: "SQLite",
+        icon: "./assets/tech/sqlite.svg".into(),
+        link: "https://www.sqlite.org/",
+        classes: vec!["sqlite", "databases", "personal_project"],
+    };
+
+    let postgres = Item {
+        name: "PostgreSQL",
+        icon: "./assets/tech/postgresql.svg".into(),
+        link: "https://www.postgresql.org/",
+        classes: vec!["postgres", "databases", "personal_project"],
+    };
+
+    let mongodb = Item {
+        name: "MongoDB",
+        icon: "./assets/tech/mongodb.svg".into(),
+        link: "https://www.mongodb.com/",
+        classes: vec![
+            "mongodb",
+            "databases",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+
+    let cassandra = Item {
+        name: "Cassandra",
+        icon: "./assets/tech/cassandra.svg".into(),
+        link: "https://cassandra.apache.org/_/index.html",
+        classes: vec![
+            "cassandra",
+            "databases",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+
+    let databases = Area {
+        name: "Databases",
+        items: vec![sqlite, postgres, mongodb, cassandra],
+    };
 
     vec![languages, frontend, fullstack, backend, databases]
 }

@@ -166,6 +166,7 @@ a p {
 }
 
 .right {
+    flex: auto;
     justify-content: end;
     align-items: end;
 }
@@ -196,4 +197,21 @@ a p {
 
 .nowrap {
     white-space: nowrap;
+}
+
+.eca {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.float {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    gap: 0.3rem;
+}
+
+.glow {
+    
 }
