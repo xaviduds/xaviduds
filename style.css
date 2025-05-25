@@ -1,3 +1,64 @@
+:root {
+    /* Catppuccin Macchiato Colors */
+    --cat-rosewater: #f4dbd6;
+    --cat-flamingo: #f0c6c6;
+    --cat-pink: #f5bde6;
+    --cat-mauve: #c6a0f6;
+    --cat-red: #ed8796;
+    --cat-maroon: #ee99a0;
+    --cat-peach: #f5a97f;
+    --cat-yellow: #eed49f;
+    --cat-green: #a6da95;
+    --cat-teal: #8bd5ca;
+    --cat-sky: #91d7e3;
+    --cat-sapphire: #7dc4e4;
+    --cat-blue: #8aadf4;
+    --cat-lavender: #b7bdf8;
+
+    --cat-text: #cad3f5;
+    --cat-subtext1: #b8c0e0;
+    --cat-subtext0: #a5adcb;
+    --cat-overlay2: #939ab7;
+    --cat-overlay1: #8087a2;
+    --cat-overlay0: #6e738d;
+
+    --cat-surface2: #5b6078;
+    --cat-surface1: #494d64;
+    --cat-surface0: #363a4f;
+
+    --cat-base: #24273a;
+    --cat-mantle: #1e2030;
+    --cat-crust: #181926;
+
+    /* Sizes */
+    --size-almond-initial: 2.4rem;
+    --size-almond-hover: 3rem;
+    --size-logo: 4rem;
+    --size-linkedin: 3.4rem;
+    --size-lince: 6rem;
+    --size-selfie: 10rem;
+    --size-pea: 1.5rem;
+
+    /* Margins */
+    --margin-almond-initial: calc(
+        (var(--size-almond-hover) - var(--size-almond-initial)) / 2
+    );
+
+    /* Colors */
+    --color-bg: black;
+    --color-text: white;
+    --color-frame: white;
+    --color-card: #111f36;
+    --color-active: #c96040;
+    --color-inactive: #4b8739;
+    --color-hover-primary: #f5a97f;
+    --color-hover-secondary: #ed8796;
+    --color-jump-shadow: #111;
+    --color-dark-blue: #363a4f;
+    --color-glow: pink;
+}
+
+/* ========== Fonts ========== */
 @font-face {
     font-family: "Inter";
     src: url("./assets/fonts/InterVariable.ttf") format("truetype");
@@ -12,61 +73,32 @@
     font-style: italic;
 }
 
+/* ========== Base ========== */
 body {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     height: 100vh;
-    margin: 0rem;
-    padding: 0rem;
-    background-color: black;
-    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
+/* ========== Structure ========== */
 header {
     padding: 0.5rem;
-    /* padding: 0.8rem 0.8rem 0.4rem 0.8rem; */
 }
 
 main {
-    margin: 0rem 0.5rem 0.5rem 0.5rem;
+    margin: 0 0.5rem 0.5rem;
 }
 
 p {
-    margin: 0rem;
-    padding: 0rem;
+    margin: 0;
+    padding: 0;
 }
 
-.flex {
-    display: flex;
-}
-
-.framed {
-    border: 1px solid white;
-    border-radius: 0.5rem;
-}
-
-.middle_x {
-    justify-content: center;
-}
-
-.middle_y {
-    align-items: center;
-}
-
-.shy {
-    width: min-content;
-    height: min-content;
-}
-
-.filler {
-    flex-grow: 1;
-}
-
-.showoff {
-    width: 100%;
-    height: 100%;
-}
-
+/* ========== Layout Utilities ========== */
 .row {
     display: flex;
     flex-direction: row;
@@ -74,13 +106,63 @@ p {
 .column {
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
+}
+.middle_x {
+    justify-content: center;
+}
+.middle_y {
+    align-items: center;
+}
+.start {
+    align-items: start;
+}
+.filler {
+    flex-grow: 1;
+}
+.shy {
+    width: min-content;
+    height: min-content;
+}
+.showoff {
+    width: 100%;
+    height: 100%;
+}
+.full_w {
+    width: 100vw;
+}
+.full_h {
+    height: 100vh;
+}
+.almost_full_w {
+    width: 96vw;
+}
+.nowrap {
+    white-space: nowrap;
 }
 
+/* ========== Common Styles ========== */
+.framed {
+    border: 1px solid var(--color-frame);
+    border-radius: 0.5rem;
+}
+
+.card {
+    background: var(--color-card);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 55vw;
+}
+
+.stripped,
+.project {
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== Images & Icons ========== */
 .logo {
-    --size: 4rem;
-    width: var(--size);
-    height: var(--size);
+    width: var(--size-logo);
+    height: var(--size-logo);
     padding: 0.1rem;
     box-sizing: border-box;
 }
@@ -90,86 +172,122 @@ p {
     object-fit: contain;
 }
 
-.red {
-    background: red;
-}
-
-.blue {
-    background: blue;
-}
-
-.green {
-    background: green;
-}
-
 .linkedin {
-    --size: 3.4rem;
-    width: var(--size);
-    height: var(--size);
-}
-
-.tabula_rasa {
-    color: white !important;
-    text-decoration: none !important;
-}
-
-.project {
-    margin: 0rem;
-    padding: 0rem;
+    width: var(--size-linkedin);
+    height: var(--size-linkedin);
 }
 
 .lince {
-    --size: 6rem;
-    width: var(--size);
-    height: var(--size);
+    width: var(--size-lince);
+    height: var(--size-lince);
     border-radius: 0.6rem;
 }
 
-.title {
-    font-size: 2rem;
-    margin: 0rem;
-    padding: 0rem;
-}
-
 .selfie {
-    --size: 10rem;
-    width: var(--size);
-    height: var(--size);
-    border-radius: calc(var(--size) / 2);
+    width: var(--size-selfie);
+    height: var(--size-selfie);
+    border-radius: 50%;
 }
 
-.pea_size {
-    --size: 1.5rem;
-    width: var(--size);
-    height: var(--size);
+.xs {
+    width: var(--size-pea);
+    height: var(--size-pea);
 }
 
-.almond_size {
-    --size: 2.4rem;
-    width: var(--size);
-    height: var(--size);
+/* ========== Almond Size ========== */
+.s {
+    width: var(--size-almond-initial);
+    height: var(--size-almond-initial);
+    margin: var(--margin-almond-initial);
+    transition:
+        width 0.2s,
+        height 0.2s,
+        margin 0.2s;
+}
+.s:hover {
+    width: var(--size-almond-hover);
+    height: var(--size-almond-hover);
+    margin: 0;
 }
 
-.card {
-    background: #111f36;
-    border-radius: 1rem;
-    padding: 2rem;
-    width: 55vw;
+/* ========== Buttons ========== */
+.tabula_rasa {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
 }
 
-.censa {
-    gap: 1rem;
+.active_button {
+    background: var(--color-active);
 }
 
-.mini_censa {
+.inactive_button {
+    background: var(--color-inactive);
+}
+
+.active_jumpy_button,
+.inactive_jumpy_button {
+    position: relative;
+    border: 2px solid var(--color-jump-shadow);
+    border-radius: 8px;
+    padding: 0.5rem;
+    font: 1rem sans-serif;
+    color: var(--color-jump-shadow);
+    cursor: pointer;
+    height: 3rem;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.active_jumpy_button {
+    background: var(--color-hover-primary);
+}
+.active_jumpy_button:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0 var(--color-jump-shadow);
+}
+
+.inactive_jumpy_button {
+    background: var(--color-hover-secondary);
+}
+.inactive_jumpy_button:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0 var(--color-jump-shadow);
+}
+
+/* ========== Colors ========== */
+.red {
+    background: red;
+}
+.blue {
+    background: blue;
+}
+.green {
+    background: green;
+}
+.glow {
+    background: var(--color-glow);
+}
+.dark_blue {
+    background: var(--color-dark-blue);
+}
+
+/* ========== Misc ========== */
+.s_gap {
     gap: 0.5rem;
 }
-
-.stripped {
-    margin: 0;
-    padding: 0;
+.m_gap {
+    gap: 1rem;
+}
+.eca {
+    padding: 1rem;
+    margin: 1rem;
+}
+.mini_eca {
+    padding: 0.5rem;
 }
 
+/* ========== Tech Logos ========== */
 .axum,
 .flask,
 .express,
@@ -186,94 +304,8 @@ p {
     background: white;
     border-radius: 0.5rem;
 }
+
 .linux {
     background: black;
     border-radius: 0.5rem;
-}
-
-.nowrap {
-    white-space: nowrap;
-}
-
-.eca {
-    padding: 1rem;
-    margin: 1rem;
-}
-
-.mini_eca {
-    padding: 0.5rem;
-}
-
-.glow {
-    background: pink;
-}
-
-.full_h {
-    height: 100vh;
-}
-
-.full_w {
-    width: 100vw;
-}
-
-.almost_full_w {
-    width: 96vw;
-}
-
-.left {
-    align-items: start;
-}
-
-.active_button {
-    background: #c96040;
-}
-
-.inactive_button {
-    background: #4b8739;
-}
-
-.active_jumpy_button {
-    position: relative;
-    background: #f5a97f;
-    border: 2px solid #111;
-    border-radius: 8px;
-    padding: 0.5rem;
-    font: 16px sans-serif;
-    color: #111;
-    cursor: pointer;
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.active_jumpy_button:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 4px 4px 0 #111;
-}
-
-.inactive_jumpy_button {
-    position: relative;
-    background: #ed8796;
-    border: 2px solid #111;
-    border-radius: 8px;
-    padding: 0.5rem;
-    font: 16px sans-serif;
-    color: #111;
-    cursor: pointer;
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.inactive_jumpy_button:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 4px 4px 0 #111;
-}
-
-.dark_blue {
-    background: #363a4f;
-}
-
-.top {
-    align-items: start;
 }

@@ -3,17 +3,21 @@ use maud::{Markup, html};
 
 pub fn stack() -> Markup {
     html! {
-        section class="column middle_y middle_x"{
-            @for area in tech_areas() {
-                div class="row" {
+    .column.middle_y.middle_x.start {
+        @for area in tech_areas() {
+            .row.middle_y.m{
+                button
+                    data-signals=(format!("{{{}: true}}", area.class))
+                    data-on-click=(format!("${}=!${}", area.class, area.class))
+                    data-class=(format!("{{'active_jumpy_button': ${}, 'inactive_jumpy_button': !${}}}", area.class, area.class)) {
+                        (area.name)
+                }
+                .row {
                     @for tech in &area.items {
                         a href=(tech.link) class=(area.class.to_owned() + " middle_y column") target="_blank" rel="noopener noreferrer"
-                            data-show=("$".to_owned() + area.class)
-                            {
-                            div class="logo" {
-                                img class=(tech.classes.join(" ")) src=(tech.icon) alt=(tech.name) {}
+                            data-show=("$".to_owned() + area.class) {
+                                img class=(tech.classes.join(" ") + " logo") src=(tech.icon) alt=(tech.name) {}
                             }
-                            div class="middle_x shy tabula_rasa" { (tech.name) }
                         }
                     }
                 }

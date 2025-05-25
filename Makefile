@@ -1,15 +1,14 @@
-build:
-	cargo build \
-	--target wasm32-unknown-unknown
-
-	wasm-bindgen \
-	--out-name wasm_example \
-    --out-dir stack_wasm \
-    --target web target/wasm32-unknown-unknown/debug/portfolio.wasm
-
-on:
-	mprocs "bacon . --job run" "npm run dev"
-
 install:
+	yay -S --needed --noconfirm \
+	nodejs \
+	npm
+
+	npm install
 	npm install vite
-	yay -S mprocs --no-confirm --needed
+	cargo install bacon mprocs
+
+run:
+	mprocs "bacon clippy-all" "bacon . --job run" "npm run dev"
+
+build:
+	cargo build --release

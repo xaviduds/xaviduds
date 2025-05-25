@@ -3,10 +3,10 @@ use maud::{Markup, PreEscaped, html};
 
 pub fn card() -> Markup {
     html!(
-        div class="row middle_x middle_y censa framed mini_eca" {
+        div class="row middle_x middle_y m_gap framed mini_eca" {
             (selfie())
             div class="column" {
-                div class="row censa" {
+                div class="row m_gap" {
                     (title())
                     (socials())
                 }
@@ -23,12 +23,12 @@ fn selfie() -> Markup {
 
 fn title() -> Markup {
     html!(
-        div class="column middle_x mini_censa" {
-            div class="row middle_y censa" {
+        div class="column middle_x s_gap" {
+            div class="row middle_y m_gap" {
                 p class="title" { "Eduardo de Melo Xavier" }
                 (age())
             }
-            div class="row middle_y censa" {
+            div class="row middle_y m_gap" {
                 p class="stripped" { "Software Engineer @ Preto no Branco" }
                 (info())
             }
@@ -42,7 +42,7 @@ fn info() -> Markup {
     html!(
         div class="column" {
             div class="row middle_y" {
-                div class="pea_size" {
+                .xs {
                     svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="100%" height="100%" {
                         path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" {}
                     }
@@ -77,10 +77,10 @@ fn age() -> Markup {
 
 pub fn socials() -> Markup {
     html! {
-        div class="column" {
+        .column {
             @for tech in &social_area().items {
                 a href=(tech.link) target="_blank" rel="noopener noreferrer" {
-                    img class=(tech.classes.join(" ") + " almond_size") src=(tech.icon) alt=(tech.name) {}
+                    img class=(tech.classes.join(" ") + " s") src=(tech.icon) alt=(tech.name) {}
                 }
             }
         }
