@@ -1,6 +1,6 @@
 use crate::presentation::components::{header::header, main::comp_main};
 
-use super::framework::datastar;
+use super::vendoring::framework::datastar;
 
 pub fn final_html() -> String {
     r#"<!DOCTYPE html>

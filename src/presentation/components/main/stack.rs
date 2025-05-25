@@ -3,9 +3,12 @@ use maud::{Markup, html};
 
 pub fn stack() -> Markup {
     html! {
-    .column.middle_y.middle_x.start {
+    #sortContainer.column.start
+        data-signals="{orderInfo: ''}"
+        data-on-reordered="$orderInfo = event.detail.orderInfo"
+        {
         @for area in tech_areas() {
-            .row.middle_y.m{
+            .row.middle_y {
                 button
                     data-signals=(format!("{{{}: true}}", area.class))
                     data-on-click=(format!("${}=!${}", area.class, area.class))
@@ -14,7 +17,7 @@ pub fn stack() -> Markup {
                 }
                 .row {
                     @for tech in &area.items {
-                        a href=(tech.link) class=(area.class.to_owned() + " middle_y column") target="_blank" rel="noopener noreferrer"
+                        a href=(tech.link) class=(tech.classes.iter().map(|class| class.to_string() + "_card ").collect::<String>() + area.class + " jumpy_button middle_y middle_x column tech_item") target="_blank" rel="noopener noreferrer"
                             data-show=("$".to_owned() + area.class) {
                                 img class=(tech.classes.join(" ") + " logo") src=(tech.icon) alt=(tech.name) {}
                             }
@@ -22,6 +25,7 @@ pub fn stack() -> Markup {
                     }
                 }
             }
+        script type="module" src="./js/sortable.js" {}
         }
     }
 }
@@ -33,7 +37,7 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://react.dev/",
         classes: vec![
             "react",
-            "frontend",
+            "illusion",
             "personal_project",
             "professional_experience",
         ],
@@ -42,25 +46,47 @@ pub fn tech_areas() -> Vec<Area> {
         name: "HTMX",
         icon: "./assets/tech/htmx.svg".into(),
         link: "https://htmx.org/",
-        classes: vec!["htmx", "frontend", "personal_project"],
+        classes: vec!["htmx", "illusion", "personal_project"],
     };
-    let frontend = Area {
-        name: "Frontend",
-        items: vec![react, htmx],
-        class: "frontend",
+    let html = Item {
+        name: "HTML",
+        icon: "./assets/tech/html.svg".into(),
+        link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        classes: vec![
+            "html",
+            "illusion",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+    let css = Item {
+        name: "CSS",
+        icon: "./assets/tech/css.svg".into(),
+        link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        classes: vec![
+            "css",
+            "illusion",
+            "personal_project",
+            "professional_experience",
+        ],
+    };
+    let illusion = Area {
+        name: "Illusion",
+        items: vec![html, css, react, htmx],
+        class: "illusion",
     };
 
     let nest_js = Item {
         name: "NestJS",
         icon: "./assets/tech/nestjs.svg".into(),
         link: "https://nestjs.com/",
-        classes: vec!["nestjs", "backend", "professional_experience"],
+        classes: vec!["nestjs", "invocation", "professional_experience"],
     };
     let elysia_js = Item {
         name: "ElysiaJS",
         icon: "./assets/tech/elysiajs.svg".into(),
         link: "https://elysiajs.com/",
-        classes: vec!["elysia", "backend", "personal_project"],
+        classes: vec!["elysia", "invocation", "personal_project"],
     };
     let axum = Item {
         name: "Axum",
@@ -68,7 +94,7 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://github.com/tokio-rs/axum",
         classes: vec![
             "axum",
-            "backend",
+            "invocation",
             "personal_project",
             "professional_experience",
         ],
@@ -77,36 +103,36 @@ pub fn tech_areas() -> Vec<Area> {
         name: "Express",
         icon: "./assets/tech/express.svg".into(),
         link: "https://expressjs.com/",
-        classes: vec!["express", "backend", "personal_project"],
+        classes: vec!["express", "invocation", "personal_project"],
     };
     let flask = Item {
         name: "Flask",
         icon: "./assets/tech/flask.svg".into(),
         link: "https://flask.palletsprojects.com/en/stable/",
-        classes: vec!["flask", "backend", "personal_project"],
+        classes: vec!["flask", "invocation", "personal_project"],
     };
-    let backend = Area {
-        name: "Backend",
+    let invocation = Area {
+        name: "Invocation",
         items: vec![nest_js, elysia_js, axum, express, flask],
-        class: "backend",
+        class: "invocation",
     };
 
     let nextjs = Item {
         name: "Next.js",
         icon: "./assets/tech/nextjs.svg".into(),
         link: "https://nextjs.org/",
-        classes: vec!["nextjs", "fullstack", "personal_project"],
+        classes: vec!["nextjs", "dual_casting", "personal_project"],
     };
     let datastar = Item {
         name: "Datastar",
         icon: "./assets/tech/datastar.webp".into(),
         link: "https://data-star.dev/",
-        classes: vec!["datastar", "fullstack", "personal_project"],
+        classes: vec!["datastar", "dual_casting", "personal_project"],
     };
-    let fullstack = Area {
-        name: "Fullstack",
+    let dual_casting = Area {
+        name: "Dual Casting",
         items: vec![nextjs, datastar],
-        class: "fullstack",
+        class: "dual_casting",
     };
 
     let rust = Item {
@@ -115,7 +141,7 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://www.rust-lang.org/",
         classes: vec![
             "rust",
-            "languages",
+            "enchantment",
             "personal_project",
             "professional_experience",
         ],
@@ -126,7 +152,7 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://www.typescriptlang.org/",
         classes: vec![
             "typescript",
-            "languages",
+            "enchantment",
             "personal_project",
             "professional_experience",
         ],
@@ -137,28 +163,28 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://www.python.org/downloads/",
         classes: vec![
             "python",
-            "languages",
+            "enchantment",
             "personal_project",
             "professional_experience",
         ],
     };
-    let languages = Area {
-        name: "Languages",
+    let enchantment = Area {
+        name: "Enchantment",
         items: vec![rust, typescript, python],
-        class: "languages",
+        class: "enchantment",
     };
 
     let sqlite = Item {
         name: "SQLite",
         icon: "./assets/tech/sqlite.svg".into(),
         link: "https://www.sqlite.org/",
-        classes: vec!["sqlite", "databases", "personal_project"],
+        classes: vec!["sqlite", "alquery", "personal_project"],
     };
     let postgres = Item {
         name: "PostgreSQL",
         icon: "./assets/tech/postgresql.svg".into(),
         link: "https://www.postgresql.org/",
-        classes: vec!["postgres", "databases", "personal_project"],
+        classes: vec!["postgres", "alquery", "personal_project"],
     };
     let mongodb = Item {
         name: "MongoDB",
@@ -166,7 +192,7 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://www.mongodb.com/",
         classes: vec![
             "mongodb",
-            "databases",
+            "alquery",
             "personal_project",
             "professional_experience",
         ],
@@ -177,7 +203,7 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://cassandra.apache.org/_/index.html",
         classes: vec![
             "cassandra",
-            "databases",
+            "alquery",
             "personal_project",
             "professional_experience",
         ],
@@ -188,15 +214,15 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://cassandra.apache.org/_/index.html",
         classes: vec![
             "prisma",
-            "databases",
+            "alquery",
             "personal_project",
             "professional_experience",
         ],
     };
-    let databases = Area {
-        name: "Databases",
+    let alquery = Area {
+        name: "Alquery",
         items: vec![sqlite, postgres, mongodb, cassandra, prisma],
-        class: "databases",
+        class: "alquery",
     };
 
     let docker = Item {
@@ -205,7 +231,7 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://www.docker.com/",
         classes: vec![
             "docker",
-            "operations",
+            "nimbus_weaving",
             "personal_project",
             "professional_experience",
         ],
@@ -216,7 +242,7 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://git-scm.com/",
         classes: vec![
             "git",
-            "operations",
+            "nimbus_weaving",
             "personal_project",
             "professional_experience",
         ],
@@ -227,18 +253,18 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://github.com/",
         classes: vec![
             "github",
-            "operations",
+            "nimbus_weaving",
             "personal_project",
             "professional_experience",
         ],
     };
     let linux = Item {
         name: "Linux",
-        icon: "./assets/tech/tux_w.svg".into(),
+        icon: "./assets/tech/tux.svg".into(),
         link: "https://kernel.org/",
         classes: vec![
             "linux",
-            "operations",
+            "nimbus_weaving",
             "personal_project",
             "professional_experience",
         ],
@@ -249,13 +275,18 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://vercel.com/",
         classes: vec!["vercel", "ops", "personal_project"],
     };
-    let operations = Area {
-        name: "Operations",
+    let nimbus_weaving = Area {
+        name: "Nimbus Weaving",
         items: vec![docker, git, github, linux, vercel],
-        class: "operations",
+        class: "nimbus_weaving",
     };
 
     vec![
-        languages, frontend, fullstack, backend, databases, operations,
+        enchantment,
+        illusion,
+        dual_casting,
+        invocation,
+        alquery,
+        nimbus_weaving,
     ]
 }

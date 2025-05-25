@@ -33,8 +33,9 @@
     /* Sizes */
     --size-almond-initial: 2.4rem;
     --size-almond-hover: 3rem;
+    --size-big: 8rem;
     --size-logo: 4rem;
-    --size-linkedin: 3.4rem;
+    --size-linkedin: 2.4rem;
     --size-lince: 6rem;
     --size-selfie: 10rem;
     --size-pea: 1.5rem;
@@ -80,7 +81,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: var(--color-bg);
+    background-color: black;
     color: var(--color-text);
 }
 
@@ -139,6 +140,9 @@ p {
 .nowrap {
     white-space: nowrap;
 }
+.title {
+    font-size: 2rem;
+}
 
 /* ========== Common Styles ========== */
 .framed {
@@ -172,11 +176,6 @@ p {
     object-fit: contain;
 }
 
-.linkedin {
-    width: var(--size-linkedin);
-    height: var(--size-linkedin);
-}
-
 .lince {
     width: var(--size-lince);
     height: var(--size-lince);
@@ -194,6 +193,21 @@ p {
     height: var(--size-pea);
 }
 
+.tech_item,
+.tech_area,
+.active_jumpy_button,
+.inactive_jumpy_button {
+    height: var(--size-big);
+    width: var(--size-big);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 0.6rem;
+}
+
 /* ========== Almond Size ========== */
 .s {
     width: var(--size-almond-initial);
@@ -203,11 +217,6 @@ p {
         width 0.2s,
         height 0.2s,
         margin 0.2s;
-}
-.s:hover {
-    width: var(--size-almond-hover);
-    height: var(--size-almond-hover);
-    margin: 0;
 }
 
 /* ========== Buttons ========== */
@@ -224,25 +233,26 @@ p {
     background: var(--color-inactive);
 }
 
+.jumpy_button,
 .active_jumpy_button,
 .inactive_jumpy_button {
-    position: relative;
-    border: 2px solid var(--color-jump-shadow);
-    border-radius: 8px;
-    padding: 0.5rem;
-    font: 1rem sans-serif;
-    color: var(--color-jump-shadow);
     cursor: pointer;
-    height: 3rem;
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-.active_jumpy_button {
-    background: var(--color-hover-primary);
+.jumpy_button:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0 var(--color-jump-shadow);
 }
+
+.active_jumpy_button {
+    background: var(--cat-blue);
+}
+
 .active_jumpy_button:hover {
+    background: var(--cat-mauve);
     transform: translate(-4px, -4px);
     box-shadow: 4px 4px 0 var(--color-jump-shadow);
 }
@@ -251,6 +261,7 @@ p {
     background: var(--color-hover-secondary);
 }
 .inactive_jumpy_button:hover {
+    background: var(--cat-peach);
     transform: translate(-4px, -4px);
     box-shadow: 4px 4px 0 var(--color-jump-shadow);
 }
@@ -288,24 +299,61 @@ p {
 }
 
 /* ========== Tech Logos ========== */
-.axum,
-.flask,
-.express,
-.htmx,
-.rust,
-.github,
-.email,
-.nextjs,
-.sqlite,
-.cassandra,
-.vercel,
-.prisma,
-.mongodb {
-    background: white;
-    border-radius: 0.5rem;
+.postgres_card {
+    background: #22314d;
+}
+.elysia_card {
+    background: #0f1729;
+}
+.nestjs_card {
+    background: #1f1f22;
+}
+.git_card {
+    background: #2a2a2a;
+}
+.prisma_card {
+    background: #0c0e19;
+}
+.typescript_card {
+    background: #3178c6;
+}
+.python_card {
+    background: #255074;
+}
+.rust_card {
+    background: #f74c00;
+}
+.react_card {
+    background: #23272f;
+}
+.css_card {
+    background: #663399;
+}
+.html_card {
+    background: #e54c21;
 }
 
-.linux {
-    background: black;
-    border-radius: 0.5rem;
+.docker_card,
+.flask_card,
+.htmx_card,
+.mongodb_card {
+    background: white;
+}
+
+.github_card img,
+.email_card img,
+.email,
+.linkedin,
+.github,
+.linkedin_card img,
+.typescript_card img,
+.vercel_card img,
+.sqlite_card img,
+.cassandra_card img,
+.axum_card img,
+.express_card img,
+.nextjs_card img,
+.html_card img,
+.prisma_card img {
+    filter: invert(1);
 }

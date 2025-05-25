@@ -3,10 +3,10 @@ use maud::{Markup, PreEscaped, html};
 
 pub fn card() -> Markup {
     html!(
-        div class="row middle_x middle_y m_gap framed mini_eca" {
+        .row.middle_x.middle_y.m_gap{
             (selfie())
             div class="column" {
-                div class="row m_gap" {
+                .column.m_gap {
                     (title())
                     (socials())
                 }
@@ -32,8 +32,6 @@ fn title() -> Markup {
                 p class="stripped" { "Software Engineer @ Preto no Branco" }
                 (info())
             }
-            p class="middle_y" { "Likes: meditation, all-you-can-eat buffets and anime/manga."}
-            p class="middle_y" { "Dislikes: having too much stuff, commuting and social media."}
         }
     )
 }
@@ -77,7 +75,7 @@ fn age() -> Markup {
 
 pub fn socials() -> Markup {
     html! {
-        .column {
+        .row{
             @for tech in &social_area().items {
                 a href=(tech.link) target="_blank" rel="noopener noreferrer" {
                     img class=(tech.classes.join(" ") + " s") src=(tech.icon) alt=(tech.name) {}
