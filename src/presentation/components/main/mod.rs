@@ -6,7 +6,7 @@ use stack::stack;
 use test::test;
 
 pub fn comp_main() -> String {
-    html!(main.filler.column.framed.middle_x.middle_y {
+    html!(main.column{
         (stack())
 
     })

@@ -1,4 +1,6 @@
-use crate::presentation::components::{header::header, main::comp_main};
+use crate::presentation::components::{
+    general::general_components, header::header, main::comp_main,
+};
 
 use super::vendoring::framework::datastar;
 
@@ -18,5 +20,9 @@ pub fn final_html() -> String {
 }
 
 fn body() -> String {
-    r#"<body class="column">"#.to_string() + &header() + &comp_main() + "</body>"
+    r#"<body class="column">"#.to_string()
+        + &header()
+        + &comp_main()
+        + general_components()
+        + "</body>"
 }
