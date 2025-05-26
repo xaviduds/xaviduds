@@ -246,10 +246,9 @@ p {
 }
 
 .inactive_jumpy_button {
-    background: var(--color-hover-secondary);
+    background: black;
 }
 .inactive_jumpy_button:hover {
-    background: var(--cat-peach);
     transform: translate(-4px, -4px);
     box-shadow: 4px 4px 0 var(--color-jump-shadow);
 }
@@ -674,53 +673,26 @@ p {
 }
 
 /* ========== Tech Logos ========== */
-.postgres_card {
-    background: #22314d;
-}
-.elysia_card {
-    background: #0f1729;
-}
-.nestjs_card {
-    background: #1f1f22;
-}
-.git_card {
-    background: #2a2a2a;
-}
-.prisma_card {
-    background: #0c0e19;
-}
-.typescript_card {
-    background: #3178c6;
-}
-.python_card {
-    background: #255074;
-}
-.rust_card {
-    background: #f74c00;
-}
-.react_card {
-    background: #23272f;
-}
-.css_card {
-    background: #663399;
-}
-.html_card {
-    background: #e54c21;
+.htmx_card {
+    filter: brightness(0) invert(1);
 }
 
-.docker_card,
-.flask_card,
-.htmx_card,
-.mongodb_card {
-    background: white;
-}
-
+.datastar_card,
+.postgres_card img,
 .github_card img,
+.documentation,
+.rust_card img,
+.nestjs_card img,
 .email_card img,
+.flask_card img,
 .javascript_card img,
+.docker_card img,
 .email,
 .linkedin,
+.react_card img,
+.mongodb_card img,
 .github,
+.git_card img,
 .linkedin_card img,
 .typescript_card img,
 .vercel_card img,

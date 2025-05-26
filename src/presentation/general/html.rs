@@ -20,7 +20,7 @@ pub fn final_html() -> String {
 }
 
 fn body() -> String {
-    r#"<body class="column">"#.to_string()
+    r#"<body class="column m_gap">"#.to_string()
         + &header()
         + &comp_main()
         + general_components()

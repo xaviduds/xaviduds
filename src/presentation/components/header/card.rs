@@ -3,14 +3,14 @@ use maud::{Markup, PreEscaped, html};
 
 pub fn card() -> Markup {
     html!(
-        .row.middle_x.middle_y.m_gap{
+        .row.middle_x.middle_y.m_gap {
             (selfie())
             div class="column" {
                 .column.m_gap {
                     (title())
-                    (socials())
                 }
             }
+                    (socials())
         }
     )
 }
@@ -75,7 +75,7 @@ fn age() -> Markup {
 
 pub fn socials() -> Markup {
     html! {
-        .row{
+        .column{
             @for tech in &social_area().items {
                 a href=(tech.link) target="_blank" rel="noopener noreferrer" {
                     img class=(tech.classes.join(" ") + " s") src=(tech.icon) alt=(tech.name) {}

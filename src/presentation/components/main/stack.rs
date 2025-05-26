@@ -9,7 +9,7 @@ pub fn stack() -> Markup {
         data-on-reordered="$orderInfo = event.detail.orderInfo"
         {
         @for area in tech_areas() {
-            .row.middle_y {
+            .row.middle_y.mini_eca {
                 button
                     data-signals=(format!("{{{}: true}}", area.class))
                     data-on-click=(format!("${}=!${}", area.class, area.class))
@@ -139,7 +139,7 @@ pub fn tech_areas() -> Vec<Area> {
     };
     let datastar = Item {
         name: "Datastar",
-        icon: "./assets/tech/datastar.webp".into(),
+        icon: "./assets/tech/datastar.svg".into(),
         link: "https://data-star.dev/",
         classes: vec!["datastar", "dual_casting", "personal_project"],
     };

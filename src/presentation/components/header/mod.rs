@@ -7,7 +7,7 @@ use projects::projects;
 
 pub fn header() -> String {
     html!(
-        header class="row s_gap" {
+        header.row.m_gap {
             (card())
             (projects())
         }

@@ -1,7 +1,7 @@
 #[derive(Clone)]
 pub struct Item {
     pub name: &'static str,
-    pub icon: String,
+    pub icon: &'static str,
     pub link: &'static str,
     pub classes: Vec<&'static str>,
 }
