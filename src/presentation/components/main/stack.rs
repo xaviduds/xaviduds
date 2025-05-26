@@ -35,7 +35,7 @@ pub fn stack() -> Markup {
     }
 }
 
-pub fn tech_areas() -> Vec<Area> {
+pub fn enchantment() -> Area {
     let rust = Item {
         name: "Rust",
         icon: "./assets/tech/rust.svg".into(),
@@ -47,6 +47,7 @@ pub fn tech_areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
+
     let typescript = Item {
         name: "Typescript",
         icon: "./assets/tech/typescript.svg".into(),
@@ -58,6 +59,7 @@ pub fn tech_areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
+
     let javascript = Item {
         name: "Javascript",
         icon: "./assets/tech/javascript.svg".into(),
@@ -69,6 +71,7 @@ pub fn tech_areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
+
     let python = Item {
         name: "Python",
         icon: "./assets/tech/python.svg".into(),
@@ -80,12 +83,15 @@ pub fn tech_areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
-    let enchantment = Area {
+
+    Area {
         name: "Enchantment",
         items: vec![rust, typescript, javascript, python],
         class: "enchantment",
-    };
+    }
+}
 
+pub fn illusion() -> Area {
     let react = Item {
         name: "React",
         icon: "./assets/tech/react.svg".into(),
@@ -125,30 +131,36 @@ pub fn tech_areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
-    let illusion = Area {
+    Area {
         name: "Illusion",
         items: vec![html, css, react, htmx],
         class: "illusion",
-    };
+    }
+}
 
+pub fn dual_casting() -> Area {
     let nextjs = Item {
         name: "Next.js",
         icon: "./assets/tech/nextjs.svg".into(),
         link: "https://nextjs.org/",
         classes: vec!["nextjs", "dual_casting", "personal_project"],
     };
+
     let datastar = Item {
         name: "Datastar",
         icon: "./assets/tech/datastar.svg".into(),
         link: "https://data-star.dev/",
         classes: vec!["datastar", "dual_casting", "personal_project"],
     };
-    let dual_casting = Area {
+
+    Area {
         name: "Dual Casting",
         items: vec![nextjs, datastar],
         class: "dual_casting",
-    };
+    }
+}
 
+pub fn invocation() -> Area {
     let nest_js = Item {
         name: "NestJS",
         icon: "./assets/tech/nestjs.svg".into(),
@@ -184,12 +196,14 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://flask.palletsprojects.com/en/stable/",
         classes: vec!["flask", "invocation", "personal_project"],
     };
-    let invocation = Area {
+    Area {
         name: "Invocation",
         items: vec![nest_js, elysia_js, axum, express, flask],
         class: "invocation",
-    };
+    }
+}
 
+pub fn alquery() -> Area {
     let sqlite = Item {
         name: "SQLite",
         icon: "./assets/tech/sqlite.svg".into(),
@@ -235,12 +249,15 @@ pub fn tech_areas() -> Vec<Area> {
             "professional_experience",
         ],
     };
-    let alquery = Area {
+
+    Area {
         name: "Alquery",
         items: vec![sqlite, postgres, mongodb, cassandra, prisma],
         class: "alquery",
-    };
+    }
+}
 
+pub fn nimbus_weaving() -> Area {
     let docker = Item {
         name: "Docker",
         icon: "./assets/tech/docker.svg".into(),
@@ -291,18 +308,21 @@ pub fn tech_areas() -> Vec<Area> {
         link: "https://vercel.com/",
         classes: vec!["vercel", "ops", "personal_project"],
     };
-    let nimbus_weaving = Area {
+
+    Area {
         name: "Nimbus Weaving",
         items: vec![docker, git, github, linux, vercel],
         class: "nimbus_weaving",
-    };
+    }
+}
 
+pub fn tech_areas() -> Vec<Area> {
     vec![
-        enchantment,
-        illusion,
-        dual_casting,
-        invocation,
-        alquery,
-        nimbus_weaving,
+        dual_casting(),
+        enchantment(),
+        illusion(),
+        invocation(),
+        alquery(),
+        nimbus_weaving(),
     ]
 }
