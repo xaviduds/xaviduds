@@ -15,7 +15,9 @@ pub fn projects() -> Markup {
                     }
                     .column {
                         @for link in &project.links {
-                            img class=(link.classes.join(" ") + " s") src=(link.icon) alt=(link.name) {}
+                            a href=(link.link) target="_blank" rel="noopener noreferrer" {
+                                img class=(link.classes.join(" ") + " s") src=(link.icon) alt=(link.name) {}
+                            }
                         }
                     }
                 }

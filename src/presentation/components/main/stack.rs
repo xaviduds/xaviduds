@@ -3,6 +3,8 @@ use maud::{Markup, html};
 
 pub fn stack() -> Markup {
     html! {
+        .column {
+
     #stack.title.mini_eca {"Tech Stack"}
     #sortContainer.column.start
         data-signals="{orderInfo: ''}"
@@ -32,13 +34,14 @@ pub fn stack() -> Markup {
             }
         script type="module" src="./js/sortable.js" {}
         }
+        }
     }
 }
 
 pub fn enchantment() -> Area {
     let rust = Item {
         name: "Rust",
-        icon: "./assets/tech/rust.svg".into(),
+        icon: "./assets/tech/rust.svg",
         link: "https://www.rust-lang.org/",
         classes: vec![
             "rust",
@@ -50,7 +53,7 @@ pub fn enchantment() -> Area {
 
     let typescript = Item {
         name: "Typescript",
-        icon: "./assets/tech/typescript.svg".into(),
+        icon: "./assets/tech/typescript.svg",
         link: "https://www.typescriptlang.org/",
         classes: vec![
             "typescript",
@@ -62,8 +65,8 @@ pub fn enchantment() -> Area {
 
     let javascript = Item {
         name: "Javascript",
-        icon: "./assets/tech/javascript.svg".into(),
-        link: "https://www.javascriptlang.org/",
+        icon: "./assets/tech/javascript.svg",
+        link: "https://developer.mozilla.org/docs/Web/JavaScript",
         classes: vec![
             "javascript",
             "enchantment",
@@ -74,7 +77,7 @@ pub fn enchantment() -> Area {
 
     let python = Item {
         name: "Python",
-        icon: "./assets/tech/python.svg".into(),
+        icon: "./assets/tech/python.svg",
         link: "https://www.python.org/downloads/",
         classes: vec![
             "python",
@@ -94,7 +97,7 @@ pub fn enchantment() -> Area {
 pub fn illusion() -> Area {
     let react = Item {
         name: "React",
-        icon: "./assets/tech/react.svg".into(),
+        icon: "./assets/tech/react.svg",
         link: "https://react.dev/",
         classes: vec![
             "react",
@@ -105,13 +108,13 @@ pub fn illusion() -> Area {
     };
     let htmx = Item {
         name: "HTMX",
-        icon: "./assets/tech/htmx.svg".into(),
+        icon: "./assets/tech/htmx.svg",
         link: "https://htmx.org/",
         classes: vec!["htmx", "illusion", "personal_project"],
     };
     let html = Item {
         name: "HTML",
-        icon: "./assets/tech/html.svg".into(),
+        icon: "./assets/tech/html.svg",
         link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
         classes: vec![
             "html",
@@ -122,7 +125,7 @@ pub fn illusion() -> Area {
     };
     let css = Item {
         name: "CSS",
-        icon: "./assets/tech/css.svg".into(),
+        icon: "./assets/tech/css.svg",
         link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
         classes: vec![
             "css",
@@ -141,14 +144,14 @@ pub fn illusion() -> Area {
 pub fn dual_casting() -> Area {
     let nextjs = Item {
         name: "Next.js",
-        icon: "./assets/tech/nextjs.svg".into(),
+        icon: "./assets/tech/nextjs.svg",
         link: "https://nextjs.org/",
         classes: vec!["nextjs", "dual_casting", "personal_project"],
     };
 
     let datastar = Item {
         name: "Datastar",
-        icon: "./assets/tech/datastar.svg".into(),
+        icon: "./assets/tech/datastar.svg",
         link: "https://data-star.dev/",
         classes: vec!["datastar", "dual_casting", "personal_project"],
     };
@@ -163,19 +166,19 @@ pub fn dual_casting() -> Area {
 pub fn invocation() -> Area {
     let nest_js = Item {
         name: "NestJS",
-        icon: "./assets/tech/nestjs.svg".into(),
+        icon: "./assets/tech/nestjs.svg",
         link: "https://nestjs.com/",
         classes: vec!["nestjs", "invocation", "professional_experience"],
     };
     let elysia_js = Item {
         name: "ElysiaJS",
-        icon: "./assets/tech/elysiajs.svg".into(),
+        icon: "./assets/tech/elysiajs.svg",
         link: "https://elysiajs.com/",
         classes: vec!["elysia", "invocation", "personal_project"],
     };
     let axum = Item {
         name: "Axum",
-        icon: "./assets/tech/axum.svg".into(),
+        icon: "./assets/tech/axum.svg",
         link: "https://github.com/tokio-rs/axum",
         classes: vec![
             "axum",
@@ -186,13 +189,13 @@ pub fn invocation() -> Area {
     };
     let express = Item {
         name: "Express",
-        icon: "./assets/tech/express.svg".into(),
+        icon: "./assets/tech/express.svg",
         link: "https://expressjs.com/",
         classes: vec!["express", "invocation", "personal_project"],
     };
     let flask = Item {
         name: "Flask",
-        icon: "./assets/tech/flask.svg".into(),
+        icon: "./assets/tech/flask.svg",
         link: "https://flask.palletsprojects.com/en/stable/",
         classes: vec!["flask", "invocation", "personal_project"],
     };
@@ -206,19 +209,19 @@ pub fn invocation() -> Area {
 pub fn alquery() -> Area {
     let sqlite = Item {
         name: "SQLite",
-        icon: "./assets/tech/sqlite.svg".into(),
+        icon: "./assets/tech/sqlite.svg",
         link: "https://www.sqlite.org/",
         classes: vec!["sqlite", "alquery", "personal_project"],
     };
     let postgres = Item {
         name: "PostgreSQL",
-        icon: "./assets/tech/postgresql.svg".into(),
+        icon: "./assets/tech/postgresql.svg",
         link: "https://www.postgresql.org/",
         classes: vec!["postgres", "alquery", "personal_project"],
     };
     let mongodb = Item {
         name: "MongoDB",
-        icon: "./assets/tech/mongodb.svg".into(),
+        icon: "./assets/tech/mongodb.svg",
         link: "https://www.mongodb.com/",
         classes: vec![
             "mongodb",
@@ -229,7 +232,7 @@ pub fn alquery() -> Area {
     };
     let cassandra = Item {
         name: "Cassandra",
-        icon: "./assets/tech/cassandra.svg".into(),
+        icon: "./assets/tech/cassandra.svg",
         link: "https://cassandra.apache.org/_/index.html",
         classes: vec![
             "cassandra",
@@ -240,7 +243,7 @@ pub fn alquery() -> Area {
     };
     let prisma = Item {
         name: "Prisma",
-        icon: "./assets/tech/prisma.svg".into(),
+        icon: "./assets/tech/prisma.svg",
         link: "https://cassandra.apache.org/_/index.html",
         classes: vec![
             "prisma",
@@ -260,7 +263,7 @@ pub fn alquery() -> Area {
 pub fn nimbus_weaving() -> Area {
     let docker = Item {
         name: "Docker",
-        icon: "./assets/tech/docker.svg".into(),
+        icon: "./assets/tech/docker.svg",
         link: "https://www.docker.com/",
         classes: vec![
             "docker",
@@ -271,7 +274,7 @@ pub fn nimbus_weaving() -> Area {
     };
     let git = Item {
         name: "Git",
-        icon: "./assets/tech/git.svg".into(),
+        icon: "./assets/tech/git.svg",
         link: "https://git-scm.com/",
         classes: vec![
             "git",
@@ -282,7 +285,7 @@ pub fn nimbus_weaving() -> Area {
     };
     let github = Item {
         name: "GitHub",
-        icon: "./assets/tech/github.svg".into(),
+        icon: "./assets/tech/github.svg",
         link: "https://github.com/xaviduds",
         classes: vec![
             "github",
@@ -293,7 +296,7 @@ pub fn nimbus_weaving() -> Area {
     };
     let linux = Item {
         name: "Linux",
-        icon: "./assets/tech/tux.svg".into(),
+        icon: "./assets/tech/tux.svg",
         link: "https://kernel.org/",
         classes: vec![
             "linux",
@@ -304,7 +307,7 @@ pub fn nimbus_weaving() -> Area {
     };
     let vercel = Item {
         name: "Vercel",
-        icon: "./assets/tech/vercel.svg".into(),
+        icon: "./assets/tech/vercel.svg",
         link: "https://vercel.com/",
         classes: vec!["vercel", "ops", "personal_project"],
     };

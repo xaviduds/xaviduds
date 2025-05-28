@@ -25,7 +25,7 @@
     --color-inactive: #4b8739;
     --color-hover-primary: #f5a97f;
     --color-hover-secondary: #ed8796;
-    --color-jump-shadow: #111;
+    --color-jump-shadow: rgba(255, 255, 255, 0.8);
     --color-dark-blue: #363a4f;
     --color-glow: pink;
 
@@ -201,6 +201,22 @@ p {
     font-size:;
 }
 
+.tag {
+    font-size: 1rem;
+    margin: 0.15rem;
+    padding: 0.35rem;
+    border: 0.13rem solid white;
+    border-radius: 0.9rem;
+}
+
+#experiences {
+    width: 33rem;
+}
+
+.end {
+    justify-content: end;
+}
+
 /* ========== Almond Size ========== */
 .s {
     width: var(--size-almond-initial);
@@ -216,6 +232,7 @@ p {
 .jumpy_button,
 .active_jumpy_button,
 .inactive_jumpy_button {
+    background: black;
     border: none;
     outline: none;
     cursor: pointer;
@@ -230,27 +247,13 @@ p {
     width: var(--size-tech-area-width);
 }
 
-.jumpy_button:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 4px 4px 0 var(--color-jump-shadow);
-}
-
-.active_jumpy_button {
-    background: var(--cat-blue);
-}
-
-.active_jumpy_button:hover {
-    background: var(--cat-mauve);
-    transform: translate(-4px, -4px);
-    box-shadow: 4px 4px 0 var(--color-jump-shadow);
-}
-
-.inactive_jumpy_button {
-    background: black;
-}
+.jumpy_button:hover,
+.active_jumpy_button:hover,
 .inactive_jumpy_button:hover {
     transform: translate(-4px, -4px);
-    box-shadow: 4px 4px 0 var(--color-jump-shadow);
+    box-shadow:
+        4px 4px 0 var(--color-jump-shadow),
+        0.25rem 0.25rem 1rem rgba(255, 255, 255, 0.8);
 }
 
 .active_enchantment_area {
@@ -658,6 +661,9 @@ p {
 }
 
 /* ========== Misc ========== */
+.xs_gap {
+    gap: 0.2rem;
+}
 .s_gap {
     gap: 0.5rem;
 }
@@ -673,11 +679,11 @@ p {
 }
 
 /* ========== Tech Logos ========== */
-.htmx_card {
+.htmx_card img {
     filter: brightness(0) invert(1);
 }
 
-.datastar_card,
+.datastar_card img,
 .postgres_card img,
 .github_card img,
 .documentation,
