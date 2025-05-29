@@ -5,7 +5,7 @@ use maud::html;
 
 pub fn header() -> String {
     html!(
-        header.column.m_gap {
+        header.column.m_gap.eca {
             (card())
         }
     )

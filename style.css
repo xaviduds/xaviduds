@@ -4,6 +4,7 @@
     --size-almond-hover: 3rem;
     --size-big: 5rem;
     --size-logo: calc(var(--size-big) * 0.73);
+    --size-project: 7rem;
     --size-tech-area-width: calc(var(--size-big) * 1.5);
     --size-tech-area-height: calc(var(--size-big) * 1);
     --size-linkedin: 2.4rem;
@@ -111,14 +112,37 @@ p {
     flex-direction: column;
 }
 .middle_x {
+    display: flex;
     justify-content: center;
 }
 .middle_y {
+    display: flex;
     align-items: center;
 }
-.start {
+.start_y {
+    display: flex;
     align-items: start;
 }
+
+.start_x {
+    display: flex;
+    justify-content: start;
+}
+
+.end_x {
+    display: flex;
+    justify-content: end;
+}
+
+.end_y {
+    display: flex;
+    align-items: end;
+}
+
+.separa {
+    justify-content: space-between;
+}
+
 .filler {
     flex-grow: 1;
 }
@@ -165,6 +189,7 @@ p {
     width: var(--size-lince);
     height: var(--size-lince);
     border-radius: 0.6rem;
+    filter: invert(1);
 }
 
 .selfie {
@@ -213,10 +238,31 @@ p {
     width: 33rem;
 }
 
-.end {
-    justify-content: end;
+#sort_container {
+    min-width: 34rem;
+    margin-bottom: 1rem;
 }
 
+.m_logo {
+    width: var(--size-project);
+    height: var(--size-project);
+}
+
+.project {
+    width: 21rem;
+}
+
+.fade {
+    transition: opacity 2s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
 /* ========== Almond Size ========== */
 .s {
     width: var(--size-almond-initial);
@@ -229,6 +275,17 @@ p {
 }
 
 /* ========== Buttons ========== */
+.social {
+    transition: filter 0.5s ease;
+}
+
+.social:hover {
+    filter: invert();
+    box-shadow:
+        4px 4px 0 var(--color-jump-shadow),
+        0.25rem 0.25rem 1rem rgba(255, 255, 255, 0.8);
+}
+
 .jumpy_button,
 .active_jumpy_button,
 .inactive_jumpy_button {
@@ -670,6 +727,11 @@ p {
 .m_gap {
     gap: 1rem;
 }
+
+.g_gap {
+    gap: 3rem;
+}
+
 .eca {
     padding: 1rem;
     margin: 1rem;

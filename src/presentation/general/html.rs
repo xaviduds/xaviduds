@@ -11,7 +11,8 @@ pub fn final_html() -> String {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>HTML 5 Boilerplate</title>
+        <link rel="icon" type="image/x-icon" href="assets/general/favicon.ico">
+        <title>Eduardo Xavier</title>
         <link rel="stylesheet" href="style.css">"#
         .to_string()
         + datastar()
@@ -20,7 +21,7 @@ pub fn final_html() -> String {
 }
 
 fn body() -> String {
-    r#"<body class="column m_gap">"#.to_string()
+    r#"<body class="column m_gap middle_y">"#.to_string()
         + &header()
         + &comp_main()
         + general_components()

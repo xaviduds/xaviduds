@@ -5,15 +5,19 @@ pub fn projects() -> Markup {
     let projects = items();
 
     html!(
-        .row.middle_x.middle_y.filler {
+        #projects.column.middle_y{
+            p.title {"Familiars"}
             @for project in projects {
-                .row.middle_y.middle_x.m_gap {
-                    img class=(project.class) src=(project.icon) alt=(project.name) {}
-                    .column {
+                .row.middle_y.separa.project {
+                   .start_x.middle_y {
+
+                    img class=(project.class.to_owned() + " m_logo start_y" ) src=(project.icon) alt=(project.name) {}
+                    .column{
                         p.title {(project.name)}
                         p {(project.description)}
                     }
-                    .column {
+                   }
+                    .column.middle_y {
                         @for link in &project.links {
                             a href=(link.link) target="_blank" rel="noopener noreferrer" {
                                 img class=(link.classes.join(" ") + " s") src=(link.icon) alt=(link.name) {}
@@ -48,5 +52,31 @@ fn items() -> Vec<Project> {
         ],
     };
 
-    vec![lince]
+    let kamalion = Project {
+        class: "kamalion",
+        name: "Kamalion",
+        icon: "./assets/project/kamalion.svg",
+        description: PreEscaped("An rpg."),
+        links: vec![Item {
+            name: "Code",
+            link: "https://github.com/xaviduds/kamalion",
+            icon: "./assets/tech/github.svg",
+            classes: vec!["github", "social"],
+        }],
+    };
+
+    let mosca = Project {
+        class: "mosca",
+        name: "M.O.S.C.A",
+        icon: "./assets/project/mosca.svg",
+        description: PreEscaped("M.O.S.C.A"),
+        links: vec![Item {
+            name: "Code",
+            link: "https://github.com/lince-social/mosca",
+            icon: "./assets/tech/github.svg",
+            classes: vec!["github", "social"],
+        }],
+    };
+
+    vec![lince, kamalion, mosca]
 }

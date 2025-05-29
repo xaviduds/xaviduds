@@ -3,37 +3,36 @@ use maud::{Markup, html};
 
 pub fn stack() -> Markup {
     html! {
-        .column {
-
-    #stack.title.mini_eca {"Tech Stack"}
-    #sortContainer.column.start
-        data-signals="{orderInfo: ''}"
-        data-on-reordered="$orderInfo = event.detail.orderInfo"
-        {
-        @for area in tech_areas() {
-            .row.middle_y.mini_eca {
-                button
-                    data-signals=(format!("{{{}: true}}", area.class))
-                    data-on-click=(format!("${}=!${}", area.class, area.class))
-                    data-class=(format!("{{'active_{}_area active_jumpy_button': ${}, 'inactive_{}_area inactive_jumpy_button': !${}}}",
-                        area.class,area.class, area.class, area.class)) {
-                        (area.name)
-                }
-                .row {
-                    @for tech in &area.items {
-                        a
-                            href=(tech.link) target="_blank" rel="noopener noreferrer"
-                            class=(tech.classes.iter().map(|class| class.to_string() + "_card ").collect::<String>()
-                                + area.class + " jumpy_button middle_y middle_x column tech_item")
-                            data-show=("$".to_owned() + area.class) {
-                                img class=(tech.classes.join(" ") + " logo") src=(tech.icon) alt=(tech.name) {}
+    #sort_container.column {
+        .title.mini_eca.middle_x {"Grimoire"}
+        .column.start
+            data-signals="{orderInfo: ''}"
+            data-on-reordered="$orderInfo = event.detail.orderInfo"
+            {
+            @for area in tech_areas() {
+                .row.middle_y.mini_eca {
+                    button
+                        data-signals=(format!("{{{}: true}}", area.class))
+                        data-on-click=(format!("${}=!${}", area.class, area.class))
+                        data-class=(format!("{{'active_{}_area active_jumpy_button': ${}, 'inactive_{}_area inactive_jumpy_button': !${}}}",
+                            area.class,area.class, area.class, area.class)) {
+                            (area.name)
+                    }
+                    .row {
+                        @for tech in &area.items {
+                            a
+                                href=(tech.link) target="_blank" rel="noopener noreferrer"
+                                class=(tech.classes.iter().map(|class| class.to_string() + "_card ").collect::<String>()
+                                    + area.class + " jumpy_button middle_y middle_x column tech_item")
+                                data-show=("$".to_owned() + area.class) {
+                                    img class=(tech.classes.join(" ") + " logo") src=(tech.icon) alt=(tech.name) {}
+                                }
                             }
                         }
                     }
                 }
+            script type="module" src="./js/sortable.js" {}
             }
-        script type="module" src="./js/sortable.js" {}
-        }
         }
     }
 }
