@@ -53,13 +53,13 @@ fn items() -> Vec<Project> {
     };
 
     let kamalion = Project {
-        class: "kamalion",
-        name: "Kamalion",
-        icon: "./assets/project/kamalion.svg",
+        class: "kamalie",
+        name: "Kamalie",
+        icon: "./assets/project/kamalie.svg",
         description: PreEscaped("An rpg."),
         links: vec![Item {
             name: "Code",
-            link: "https://github.com/xaviduds/kamalion",
+            link: "https://github.com/xaviduds/kamalie",
             icon: "./assets/tech/github.svg",
             classes: vec!["github", "social"],
         }],
