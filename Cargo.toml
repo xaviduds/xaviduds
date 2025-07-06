@@ -1,7 +1,21 @@
 [package]
-name = "portfolio"
-version = "0.1.0"
+name = "xaviduds"
+version = "0.2.0"
 edition = "2024"
 
 [dependencies]
-maud = "0.27.0"
+maud = { version = "*" }
+axum = { version = "*", features = [] }
+tokio = { version = "*", features = ["rt-multi-thread"] }
+
+[profile]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"
