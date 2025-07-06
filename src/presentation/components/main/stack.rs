@@ -31,7 +31,6 @@ pub fn stack() -> Markup {
                         }
                     }
                 }
-            script type="module" src="./js/sortable.js" {}
             }
         }
     }

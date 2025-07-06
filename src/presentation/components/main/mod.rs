@@ -16,7 +16,6 @@ pub fn comp_main() -> String {
         {
             (projects())
             (stack())
-            script type="module" src="./js/sortableMain.js" {}
         }
     )
     .0 + &test()

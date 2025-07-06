@@ -5,17 +5,3 @@ edition = "2024"
 
 [dependencies]
 maud = { version = "*" }
-axum = { version = "*", features = [] }
-tokio = { version = "*", features = ["rt-multi-thread"] }
-
-[profile]
-
-[profile.wasm-dev]
-inherits = "dev"
-opt-level = 1
-
-[profile.server-dev]
-inherits = "dev"
-
-[profile.android-dev]
-inherits = "dev"

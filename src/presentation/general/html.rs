@@ -25,5 +25,9 @@ fn body() -> String {
         + &header()
         + &comp_main()
         + general_components()
+        // + "<script>
+        //         const src = new EventSource('/');
+        //         src.onmessage = () => location.reload();
+        //    </script>"
         + "</body>"
 }

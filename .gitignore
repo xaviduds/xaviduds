@@ -1,3 +1,5 @@
-/dist
-/target
+dist
+target
 mprocs.log
+node_modules
+package-lock.json

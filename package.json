@@ -1,0 +1,7 @@
+{
+  "name": "xaviduds",
+  "version": "1.0.0",
+  "dependencies": {
+    "vite": "^7.0.2"
+  }
+}

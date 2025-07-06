@@ -1,5 +1,8 @@
 install:
-    cargo install bacon mprocs dioxus-cli --locked
+    cargo install bacon mprocs --locked
+    yay -S --needed --noconfirm nodejs npm
+    npm init -y
+    npm install vite
 
 run: install
-    mprocs "bacon clippy-all" "dx serve --platform desktop"
+    mprocs "bacon clippy-all" "bacon . --job run" "npx vite"
