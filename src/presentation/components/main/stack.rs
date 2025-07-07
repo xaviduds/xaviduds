@@ -4,7 +4,7 @@ use maud::{Markup, html};
 pub fn stack() -> Markup {
     html! {
     #sort_container.column {
-        .title.mini_eca.middle_x {"Grimoire"}
+        .title.mini_eca.middle_x {"Stack"}
         .column.start
             data-signals="{orderInfo: ''}"
             data-on-reordered="$orderInfo = event.detail.orderInfo"
@@ -25,7 +25,8 @@ pub fn stack() -> Markup {
                                 class=(tech.classes.iter().map(|class| class.to_string() + "_card ").collect::<String>()
                                     + area.class + " jumpy_button middle_y middle_x column tech_item")
                                 data-show=("$".to_owned() + area.class) {
-                                    img class=(tech.classes.join(" ") + " logo") src=(tech.icon) alt=(tech.name) {}
+                                    p {(tech.name)}
+                                    // img class=(tech.classes.join(" ") + " logo") src=(tech.icon) alt=(tech.name) {}
                                 }
                             }
                         }
@@ -86,7 +87,7 @@ pub fn enchantment() -> Area {
     };
 
     Area {
-        name: "Enchantment",
+        name: "Languages",
         items: vec![rust, typescript, javascript, python],
         class: "enchantment",
     }
@@ -133,7 +134,7 @@ pub fn illusion() -> Area {
         ],
     };
     Area {
-        name: "Illusion",
+        name: "Frontend",
         items: vec![html, css, react, htmx],
         class: "illusion",
     }
@@ -155,7 +156,7 @@ pub fn dual_casting() -> Area {
     };
 
     Area {
-        name: "Dual Casting",
+        name: "Fullstack",
         items: vec![nextjs, datastar],
         class: "dual_casting",
     }
@@ -198,7 +199,7 @@ pub fn invocation() -> Area {
         classes: vec!["flask", "invocation", "personal_project"],
     };
     Area {
-        name: "Invocation",
+        name: "Backend",
         items: vec![nest_js, elysia_js, axum, express, flask],
         class: "invocation",
     }
@@ -252,7 +253,7 @@ pub fn alquery() -> Area {
     };
 
     Area {
-        name: "Alquery",
+        name: "Databases",
         items: vec![sqlite, postgres, mongodb, cassandra, prisma],
         class: "alquery",
     }
@@ -311,17 +312,32 @@ pub fn nimbus_weaving() -> Area {
     };
 
     Area {
-        name: "Nimbus Weaving",
+        name: "DevOps",
         items: vec![docker, git, github, linux, vercel],
         class: "nimbus_weaving",
     }
 }
 
+pub fn machine_learning() -> Area {
+    let scikit_learn = Item {
+        name: "scikit-learn",
+        icon: "./assets/tech/tux.svg",
+        link: "rada",
+        classes: vec!["scikit-learn", "ml"],
+    };
+    Area {
+        name: "Machine Learning",
+        items: vec![scikit_learn],
+        class: "machine_learning",
+    }
+}
+
 pub fn tech_areas() -> Vec<Area> {
     vec![
-        dual_casting(),
         enchantment(),
+        machine_learning(),
         illusion(),
+        dual_casting(),
         invocation(),
         alquery(),
         nimbus_weaving(),

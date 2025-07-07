@@ -8,11 +8,9 @@ pub fn card() -> Markup {
             div class="column" {
                 .column.m_gap {
                     (title())
-                    p class="middle_y" { "Likes: meditation, all-you-can-eat buffets and anime/manga."}
-                    p class="middle_y" { "Dislikes: having too much stuff, commuting and social media."}
                 }
             }
-                    (socials())
+            (socials())
         }
     )
 }

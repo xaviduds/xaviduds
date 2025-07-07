@@ -1,5 +1,3 @@
-dist
 target
 mprocs.log
-node_modules
-package-lock.json
+index.html

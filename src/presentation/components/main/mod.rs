@@ -1,22 +1,25 @@
+pub mod education;
+pub mod experience;
 pub mod projects;
 pub mod stack;
-pub mod test;
 
+use crate::presentation::components::main::{
+    education::education, experience::experience, projects::projects, stack::stack,
+};
 use maud::html;
-use projects::projects;
-use stack::stack;
-use test::test;
 
 pub fn comp_main() -> String {
     html!(
-        p.middle_y {"The magic below is alive and I cannot contain it. Maybe you can..."}
-        main #main.row.middle_x.start_y.g_gap.mini_eca
-            data-signals="{orderMain: ''}"
-            data-on-reordered="$orderMain= event.detail.orderMain"
-        {
-            (projects())
-            (stack())
+        main.row.middle_x.start_y.g_gap.mini_eca {
+            .column {
+               (experience())
+               (education())
+            }
+            .column {
+                (projects())
+                (stack())
+            }
         }
     )
-    .0 + &test()
+    .0
 }

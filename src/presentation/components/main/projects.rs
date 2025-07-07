@@ -5,8 +5,8 @@ pub fn projects() -> Markup {
     let projects = items();
 
     html!(
-        #projects.column.middle_y{
-            p.title {"Familiars"}
+        #projects.column.red.middle_y{
+            p.title {"Project"}
             @for project in projects {
                 .row.middle_y.separa.project {
                    .start_x.middle_y {
@@ -52,31 +52,5 @@ fn items() -> Vec<Project> {
         ],
     };
 
-    // let kamalion = Project {
-    //     class: "kamalie",
-    //     name: "Kamalie",
-    //     icon: "./assets/project/kamalie.svg",
-    //     description: PreEscaped("An rpg."),
-    //     links: vec![Item {
-    //         name: "Code",
-    //         link: "https://github.com/xaviduds/kamalie",
-    //         icon: "./assets/tech/github.svg",
-    //         classes: vec!["github", "social"],
-    //     }],
-    // };
-
-    let mosca = Project {
-        class: "mosca",
-        name: "M.O.S.C.A",
-        icon: "./assets/project/mosca.svg",
-        description: PreEscaped("M.O.S.C.A"),
-        links: vec![Item {
-            name: "Code",
-            link: "https://github.com/lince-social/mosca",
-            icon: "./assets/tech/github.svg",
-            classes: vec!["github", "social"],
-        }],
-    };
-
-    vec![lince, mosca]
+    vec![lince]
 }
