@@ -6,26 +6,35 @@ pub struct Experience {
     pub end: &'static str,
     pub title: &'static str,
     pub details: &'static str,
+    pub presence: &'static str,
 }
 
-pub fn experience() -> Markup {
-    let experiences = items();
+pub fn profession() -> Markup {
+    let professional_experiences = professional_experiences_provider();
+    html!((experiences("Profession", professional_experiences)))
+}
 
+pub fn experiences(title: &'static str, experiences: Vec<Experience>) -> Markup {
     html!(
-       section #experiences {
-           .title { "Experiences" }
+       section #experiences.s_gap.column.s_space {
+           .title {(title)}
            @for experience in experiences {
-               .experience {
-                   .row.nowrap {
-                        p.experience_title { (experience.title) }
-                        p { "@" }
-                        p.experience_organization { (experience.organization) }
+               .experience.column {
+                   .column.separa.nowrap {
+                        .row.nowrap.xs_gap {
+                            p.experience_title { (experience.title) }
+                            p.experience_at { "@" }
+                            p.experience_organization { (experience.organization) }
+                        }
+                        .row.separa {
+                            p {(experience.presence)}
+                            .row.s_gap {
+                                p.experience_start { (experience.start) }
+                                p.experience_separator { "-" }
+                                p.experience_end { (experience.end) }
+                            }
+                        }
                    }
-                    .row {
-                        p.experience_start { (experience.start) }
-                        p { "-" }
-                        p.experience_end { (experience.end) }
-                    }
                     p.experience_details { (experience.details) }
             }
            }
@@ -33,7 +42,7 @@ pub fn experience() -> Markup {
     )
 }
 
-fn items() -> Vec<Experience> {
+fn professional_experiences_provider() -> Vec<Experience> {
     let lsb = Experience {
         organization: "LSB - Lean Scheduling Brazil",
         start: "2022/02",
@@ -42,6 +51,7 @@ fn items() -> Vec<Experience> {
         details: "Production Engineering Internship.
         Learned about manufacturing processes, PPCP, from S&OP to MRP
         and Opcenter Advanced Planning and Scheduling.",
+        presence: "Hybrid", // details: "",
     };
     let sullab = Experience {
         organization: "Grupo Sullab",
@@ -51,6 +61,7 @@ fn items() -> Vec<Experience> {
         details: "Developed BI with
         Data Analysis and Visualization in the domain of
         biomedicine machine distribution.",
+        presence: "Hybrid", // details: "",
     };
     let evcomx = Experience {
         organization: "EVCOMX",
@@ -60,6 +71,7 @@ fn items() -> Vec<Experience> {
         details: "Implemented Scrum rituals and
         worked alongside Data Scientists to
         develop a ML and Operations Research product.",
+        presence: "Hybrid", // details: "",
     };
     let preto_no_branco = Experience {
         organization: "Preto no Branco",
@@ -68,6 +80,7 @@ fn items() -> Vec<Experience> {
         title: "Software Engineer",
         details: "Developed from static webpages to the backend of enterprise software.
         Worked with Rust, TypeScript, NestJS, React, MongoDB and Cassandra.",
+        presence: "Onsite",
     };
 
     vec![preto_no_branco, evcomx, sullab, lsb]

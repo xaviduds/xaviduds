@@ -14,7 +14,7 @@ pub fn projects() -> Markup {
     let projects = items();
 
     html!(
-        #projects.column.red.middle_y{
+        #projects.column.red.middle_y {
             p.title {"Project"}
             @for project in projects {
                 .row.middle_y.separa.project {
@@ -29,7 +29,7 @@ pub fn projects() -> Markup {
                     .column.middle_y {
                         @for link in &project.links {
                             a href=(link.link) target="_blank" rel="noopener noreferrer" {
-                                img class=(link.classes.join(" ") + " s") src=(link.icon) alt=(link.name) {}
+                                img.s_size src=(link.icon) alt=(link.name) {}
                             }
                         }
                     }
@@ -50,13 +50,11 @@ fn items() -> Vec<Project> {
                 name: "Code",
                 link: "https://github.com/lince-social/lince",
                 icon: "./assets/github.svg",
-                classes: vec!["github", "social"],
             },
             Item {
                 name: "Documentation",
                 link: "https://lince-social.github.io/book",
                 icon: "./assets/documentation.svg",
-                classes: vec!["documentation", "social"],
             },
         ],
     };

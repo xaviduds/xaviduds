@@ -18,7 +18,7 @@ fn main() {
                     title { "Eduardo Xavier"}
                     link rel="stylesheet" href="style.css";
                }
-                body.column m_gap middle_y {
+                body .column m_gap middle_y {
                     (html_header())
                     (html_main())
                 }
