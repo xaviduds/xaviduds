@@ -1,6 +1,12 @@
 use maud::{Markup, html};
 
-use crate::schema::experience::Experience;
+pub struct Experience {
+    pub organization: &'static str,
+    pub start: &'static str,
+    pub end: &'static str,
+    pub title: &'static str,
+    pub details: &'static str,
+}
 
 pub fn experience() -> Markup {
     let experiences = items();

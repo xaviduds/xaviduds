@@ -1,25 +1,21 @@
-pub mod education;
-pub mod experience;
-pub mod projects;
-pub mod stack;
+use maud::{Markup, html};
 
-use crate::presentation::components::main::{
+use crate::components::{
     education::education, experience::experience, projects::projects, stack::stack,
 };
-use maud::html;
 
-pub fn comp_main() -> String {
+pub fn html_main() -> Markup {
     html!(
         main.row.middle_x.start_y.g_gap.mini_eca {
-            .column {
+            .column.blue.hafuish {
                (experience())
                (education())
             }
-            .column {
+            .column.green.hafuish {
                 (projects())
                 (stack())
             }
         }
+        img src="assets/Untitled.jpg" {}
     )
-    .0
 }

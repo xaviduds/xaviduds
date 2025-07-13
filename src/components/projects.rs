@@ -1,5 +1,14 @@
-use crate::schema::{project::Project, tech::Item};
 use maud::{Markup, PreEscaped, html};
+
+use crate::components::stack::Item;
+
+pub struct Project {
+    pub class: &'static str,
+    pub name: &'static str,
+    pub icon: &'static str,
+    pub description: PreEscaped<&'static str>,
+    pub links: Vec<Item>,
+}
 
 pub fn projects() -> Markup {
     let projects = items();
@@ -34,19 +43,19 @@ fn items() -> Vec<Project> {
     let lince = Project {
         class: "lince",
         name: "Lince",
-        icon: "./assets/project/lince_preto_no_branco.svg",
+        icon: "./assets/lince_preto_no_branco.svg",
         description: PreEscaped("A tool for <i>everything</i>."),
         links: vec![
             Item {
                 name: "Code",
                 link: "https://github.com/lince-social/lince",
-                icon: "./assets/tech/github.svg",
+                icon: "./assets/github.svg",
                 classes: vec!["github", "social"],
             },
             Item {
                 name: "Documentation",
                 link: "https://lince-social.github.io/book",
-                icon: "./assets/social/documentation.svg",
+                icon: "./assets/documentation.svg",
                 classes: vec!["documentation", "social"],
             },
         ],

@@ -1,6 +1,6 @@
 use maud::{Markup, html};
 
-use crate::schema::experience::Experience;
+use crate::components::experience::Experience;
 
 pub fn education() -> Markup {
     html! {
