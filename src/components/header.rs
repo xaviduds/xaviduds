@@ -1,7 +1,5 @@
 use maud::{Markup, PreEscaped, html};
 
-use crate::components::stack::Area;
-
 pub fn html_header() -> Markup {
     html! {
         header.row.s_space {
