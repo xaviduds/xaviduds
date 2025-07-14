@@ -1,6 +1,6 @@
 use maud::{Markup, html};
 
-use crate::components::experience::{Experience, experiences};
+use crate::components::profession::{Experience, experiences};
 
 pub fn education() -> Markup {
     html!((experiences("Education", education_experiences_provider())))

@@ -1,10 +1,10 @@
 use maud::{Markup, PreEscaped, html};
 
-use crate::components::stack::{Area, Item};
+use crate::components::stack::Area;
 
 pub fn html_header() -> Markup {
     html! {
-        header.green.row {
+        header.row.s_space {
             .row.s_gap.middle_y {
                 (selfie())
                 .column.m_gap {
@@ -32,60 +32,33 @@ fn title() -> Markup {
     )
 }
 
-fn info() -> Markup {
-    html!(
-        .column.showoff {
-            (age())
-            (location())
-            (socials())
-        }
-    )
-}
-
-fn location() -> Markup {
-    html!(
-        .row.middle_y.s_gap {
-            p.stripped { "Porto Alegre, Brazil." }
-            .s_size.end_y {
-                svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="100%" height="100%" {
-                    path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" {}
-                }
-            }
-        }
-    )
-}
-
-fn age() -> Markup {
-    html! {
-        #age {
-            "Loading age..."
-        }
-        script {
-            (PreEscaped(r#"
-                (function() {
-                    const birth = new Date("2000-03-20");
-                    const now = new Date();
-                    let age = now.getFullYear() - birth.getFullYear();
-                    const m = now.getMonth() - birth.getMonth();
-                    if (m < 0 || (m === 0 && now.getDate() < birth.getDate())) {
-                        age--;
-                    }
-                    document.getElementById("age").textContent = age + " years old";
-                })();
-            "#))
-        }
-    }
-}
-
-pub fn socials() -> Markup {
+pub fn info() -> Markup {
     html! {
         .column {
-            @for tech in &social_area().items {
-                .row.middle_y {
-                    p {(tech.name)}
-                    a href=(tech.link) target="_blank" rel="noopener noreferrer" {
-                        img.s_size src=(tech.icon) alt=(tech.name) {}
+            @for tech in &social_area() {
+                .row.end_x.middle_y.s_gap {
+                    @if tech.name == "age" {
+                                #age {
+                                    "Loading age..."
+                                }
+                                script {
+                                    (PreEscaped(r#"
+                                        (function() {
+                                            const birth = new Date("2000-03-20");
+                                            const now = new Date();
+                                            let age = now.getFullYear() - birth.getFullYear();
+                                            const m = now.getMonth() - birth.getMonth();
+                                            if (m < 0 || (m === 0 && now.getDate() < birth.getDate())) {
+                                                age--;
+                                            }
+                                            document.getElementById("age").textContent = age + " years old";
+                                        })();
+                                    "#))
+                                }
+                    } @else {
+                        p {(tech.name)}
                     }
+                    img.s_size src=(tech.icon) {}
                 }
             }
         }
@@ -96,10 +69,10 @@ fn description() -> Markup {
     let starting_date = "2025-02-03";
     html!(
         p {
-            "Software Engineer with "
+            "Developer with "
             span id="exp" { "some experience" }
-            " of professional experience focused on Backend challenges.
-            I feel most motivated when working with necessarily complex systems, Rust codebases and robust desktop applications."
+            " of experience. In that time I helped build a safety-critical system
+            with Backend Rust code and a Machine Learning solution."
         }
         script {
             (PreEscaped(format!(r#"
@@ -134,27 +107,34 @@ fn description() -> Markup {
     )
 }
 
-pub fn social_area() -> Area {
+pub struct Item {
+    pub name: &'static str,
+    pub icon: &'static str,
+}
+
+pub fn social_area() -> Vec<Item> {
+    let age = Item {
+        name: "age",
+        icon: "./assets/cake.svg",
+    };
+    let location = Item {
+        name: "Porto Alegre, Brazil",
+        icon: "./assets/location.svg",
+    };
     let github = Item {
-        name: "github.com/xaviduds",
+        name: "xaviduds",
         icon: "./assets/github.svg",
-        link: "https://github.com/xaviduds",
     };
 
     let linkedin = Item {
-        name: "linkedin.com/in/xaviduds",
+        name: "in/xaviduds",
         icon: "./assets/linkedin.svg",
-        link: "https://linkedin.com/in/xaviduds",
     };
 
     let email = Item {
         name: "xaviduds@gmail.com",
         icon: "./assets/email.svg",
-        link: "mailto:xaviduds@gmail.com",
     };
 
-    Area {
-        name: "Socials",
-        items: vec![github, linkedin, email],
-    }
+    vec![age, location, github, linkedin, email]
 }

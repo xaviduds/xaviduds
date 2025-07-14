@@ -94,8 +94,20 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: white;
     color: black;
+    background-color: #24273a;
+    width: 100vw;
+}
+
+.content {
+    /* background-color: gray; */
+    background-color: white;
+    width: 221mm;
+}
+
+header {
+    margin-top: 1.5rem;
+    background: linear-gradient(90deg, #0036b3, #0062cb);
 }
 
 p {
@@ -165,13 +177,18 @@ p {
     height: var(--size-project);
 }
 
-.hafuish {
-    width: 50%;
+.big_spoon {
+    width: 52%;
+}
+
+.little_spoon {
+    width: 44%;
 }
 
 .title {
     font-size: 2rem;
 }
+
 /* ========== Space ========== */
 .xs_gap {
     gap: 0.2rem;
@@ -213,24 +230,33 @@ p {
     white-space: nowrap;
 }
 
-/* ========== Specific ========== */
-.logo {
-    width: var(--size-logo);
-    height: var(--size-logo);
-    padding: 0.1rem;
-    box-sizing: border-box;
+.fence--row {
+    display: flex;
+    flex-direction: row;
 }
-.logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.fence--row > * {
+    border: none; /* start with no borders */
+}
+.fence--row > * + * {
+    border-left: 1.5px solid black;
 }
 
+.fence-col {
+    display: flex;
+    /* flex-direction: column; */
+}
+.fence-col > * {
+    border: none;
+}
+.fence-col > * + * {
+    border-top: 1.33px solid black;
+}
+
+/* ========== Specific ========== */
 .lince {
     width: var(--size-lince);
     height: var(--size-lince);
     border-radius: 0.6rem;
-    filter: invert(1);
 }
 
 .selfie {
@@ -243,15 +269,30 @@ p {
 .experience_separator,
 .experience_end {
     font-weight: 550;
-    color: royalblue;
+    /* color: royalblue; */
+    /* color: #0077f1; */
+    /* color: #223a9c; */
+    color: #00267d;
 }
-
 .experience_title,
 .experience_at,
 .experience_organization {
     font-weight: 600;
 }
-
 .experience_details {
     color: #8087a2;
+}
+
+.area_title {
+    font-weight: 550;
+    font-size: 1.2rem;
+}
+.tech_name {
+}
+
+#lince-title {
+    margin-top: 0.5rem;
+}
+.lince-title {
+    font-size: 1.6rem;
 }
