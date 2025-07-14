@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="icon" r#type="image/x-icon" href="assets/favicon.ico"><title>Eduardo Xavier</title><link rel="stylesheet" href="style.css"></head><body class="middle_x"><div class="content column m_gap"><header class="row s_space"><div class="row s_gap middle_y"><img class="selfie" src="assets/selfie.jpg"></img><div class="column m_gap"><div class="column"><p class="title">Eduardo de Melo Xavier</p><p class="stripped">Software Engineer @ Preto no Branco</p></div><p>Developer with <span id="exp">some experience</span> of experience. In that time I helped build a safety-critical system
+            with Backend Rust code and a Machine Learning solution.</p><script>
+                (function() {
+                    const start = new Date("2025-02-03");
+                    const now = new Date();
+
+                    let years = now.getFullYear() - start.getFullYear();
+                    let months = now.getMonth() - start.getMonth();
+                    if (months < 0) {
+                        years--;
+                        months += 12;
+                    }
+
+                    const parts = [];
+                    if (years === 1) {
+                        parts.push("1 year");
+                    } else if (years > 1) {
+                        parts.push(years + " years");
+                    }
+
+                    if (months === 1) {
+                        parts.push("1 month");
+                    } else if (months > 1 || (years === 0 && months >= 0)) {
+                        parts.push(months + " months");
+                    }
+
+                    document.getElementById("exp").textContent = parts.join(" and ");
+                })();
+            </script></div></div><div class="column"><div class="row end_x middle_y s_gap"><div id="age">Loading age...</div><script>
+                                        (function() {
+                                            const birth = new Date("2000-03-20");
+                                            const now = new Date();
+                                            let age = now.getFullYear() - birth.getFullYear();
+                                            const m = now.getMonth() - birth.getMonth();
+                                            if (m < 0 || (m === 0 && now.getDate() < birth.getDate())) {
+                                                age--;
+                                            }
+                                            document.getElementById("age").textContent = age + " years old";
+                                        })();
+                                    </script><img class="s_size" src="./assets/cake.svg"></img></div><div class="row end_x middle_y s_gap"><p>Porto Alegre, Brazil</p><img class="s_size" src="./assets/location.svg"></img></div><div class="row end_x middle_y s_gap"><p>xaviduds</p><img class="s_size" src="./assets/github.svg"></img></div><div class="row end_x middle_y s_gap"><p>in/xaviduds</p><img class="s_size" src="./assets/linkedin.svg"></img></div><div class="row end_x middle_y s_gap"><p>xaviduds@gmail.com</p><img class="s_size" src="./assets/email.svg"></img></div></div></header><main class="row middle_x start_y s_gap"><div class="column big_spoon s_gap fence-col"><section class="s_gap column s_space" id="experiences"><div class="title">Profession</div><div class="experience column"><div class="column separa nowrap"><div class="row nowrap xs_gap"><p class="experience_title">Software Engineer</p><p class="experience_at">@</p><p class="experience_organization">Preto no Branco</p></div><div class="row separa"><p>Onsite</p><div class="row s_gap"><p class="experience_start">2025/02</p><p class="experience_separator">-</p><p class="experience_end">Present</p></div></div></div><p class="experience_details">Developed from static webpages to the backend of enterprise software and Machine Learning.
+        Worked with Rust, TypeScript, Python, NestJS, React, MongoDB and Cassandra.</p></div><div class="experience column"><div class="column separa nowrap"><div class="row nowrap xs_gap"><p class="experience_title">Product Owner Intern</p><p class="experience_at">@</p><p class="experience_organization">EVCOMX</p></div><div class="row separa"><p>Hybrid</p><div class="row s_gap"><p class="experience_start">2023/08</p><p class="experience_separator">-</p><p class="experience_end">2023/10</p></div></div></div><p class="experience_details">Implemented Scrum rituals and
+        worked alongside Data Scientists to
+        develop a ML and Operations Research product.</p></div><div class="experience column"><div class="column separa nowrap"><div class="row nowrap xs_gap"><p class="experience_title">Production Engineering Intern</p><p class="experience_at">@</p><p class="experience_organization">Grupo Sullab</p></div><div class="row separa"><p>Hybrid</p><div class="row s_gap"><p class="experience_start">2022/08</p><p class="experience_separator">-</p><p class="experience_end">2023/04</p></div></div></div><p class="experience_details">Developed BI with
+        Data Analysis and Visualization in the domain of
+        biomedicine machine distribution.</p></div><div class="experience column"><div class="column separa nowrap"><div class="row nowrap xs_gap"><p class="experience_title">APS Consultant</p><p class="experience_at">@</p><p class="experience_organization">LSB - Lean Scheduling Brazil</p></div><div class="row separa"><p>Hybrid</p><div class="row s_gap"><p class="experience_start">2022/02</p><p class="experience_separator">-</p><p class="experience_end">2022/05</p></div></div></div><p class="experience_details">Production Engineering Internship.
+        Learned about manufacturing processes, PPCP, from S&amp;OP to MRP
+        and Opcenter Advanced Planning and Scheduling.</p></div></section><section class="s_gap column s_space" id="experiences"><div class="title">Education</div><div class="experience column"><div class="column separa nowrap"><div class="row nowrap xs_gap"><p class="experience_title">Production Engineering Student</p><p class="experience_at">@</p><p class="experience_organization">PUC-RS</p></div><div class="row separa"><p>Onsite</p><div class="row s_gap"><p class="experience_start">2019/03</p><p class="experience_separator">-</p><p class="experience_end">2024/06</p></div></div></div><p class="experience_details">Took half the degree, having pursued classes in the Data Science certification. Pivoting to the self study of technology.</p></div></section></div><div class="column little_spoon s_gap fence-col"><div class="column x_start"><div class="title s_space">Tools</div><div class="column start"><div class="column s_space"><p class="area_title">Human Languages</p><div class="row s_gap"><p class="tech_name">English</p><p class="tech_name">Portuguese</p></div></div><div class="column s_space"><p class="area_title">Programming Languages</p><div class="row s_gap"><p class="tech_name">Rust</p><p class="tech_name">Typescript</p><p class="tech_name">Javascript</p><p class="tech_name">Python</p></div></div><div class="column s_space"><p class="area_title">Machine Learning</p><div class="row s_gap"><p class="tech_name">scikit-learn</p><p class="tech_name">Fine Tuning (Ultralytics [YOLO])</p><p class="tech_name">Deep Learning (Rust's Burn)</p></div></div><div class="column s_space"><p class="area_title">Frontend</p><div class="row s_gap"><p class="tech_name">HTML</p><p class="tech_name">CSS</p><p class="tech_name">React</p><p class="tech_name">HTMX</p></div></div><div class="column s_space"><p class="area_title">Fullstack</p><div class="row s_gap"><p class="tech_name">Next.js</p><p class="tech_name">Datastar</p></div></div><div class="column s_space"><p class="area_title">Backend</p><div class="row s_gap"><p class="tech_name">NestJS</p><p class="tech_name">ElysiaJS</p><p class="tech_name">Axum</p><p class="tech_name">Express</p><p class="tech_name">Flask</p></div></div><div class="column s_space"><p class="area_title">Databases</p><div class="row s_gap"><p class="tech_name">SQLite</p><p class="tech_name">PostgreSQL</p><p class="tech_name">MongoDB</p><p class="tech_name">Cassandra</p></div></div><div class="column s_space"><p class="area_title">DevOps</p><div class="row s_gap"><p class="tech_name">Docker</p><p class="tech_name">Git</p><p class="tech_name">GitHub</p><p class="tech_name">Linux</p><p class="tech_name">Vercel</p></div></div></div></div><div class="column" id="projects"><div class="row middle_y s_gap separa" id="lince-title"><p class="title">Project: Lince</p></div><div class="s_gap"><div class="start_x middle_y"><img class="lince m_logo start_y" src="./assets/lince_preto.svg" alt="Lince"></img><p>An automation and life system in Rust. Has cron-jobs, tables, a DSL, Shell/SQL commands and more.</p></div><div class="row s_gap middle_y end_x"><p>github.com/lince-social/lince</p><img class="s_size" src="./assets/github.svg"></img></div></div></div></div></main></div></body></html>
