@@ -80,7 +80,7 @@ fn professional_experiences_provider() -> Vec<Experience> {
         title: "Software Engineer",
         details: "Developed from static webpages to the backend of enterprise software and Machine Learning.
         Worked with Rust, TypeScript, Python, NestJS, React, MongoDB and Cassandra.",
-        presence: "Onsite",
+        presence: "On-site",
     };
 
     vec![preto_no_branco, evcomx, sullab, lsb]

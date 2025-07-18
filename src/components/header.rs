@@ -32,7 +32,7 @@ fn title() -> Markup {
 
 pub fn info() -> Markup {
     html! {
-        .column {
+        .column.s_gap {
             @for tech in &social_area() {
                 .row.end_x.middle_y.s_gap {
                     @if tech.name == "age" {
@@ -56,7 +56,7 @@ pub fn info() -> Markup {
                     } @else {
                         p {(tech.name)}
                     }
-                    img.s_size src=(tech.icon) {}
+                    img.s_size.info src=(tech.icon) {}
                 }
             }
         }
